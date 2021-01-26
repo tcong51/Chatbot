@@ -1,0 +1,34 @@
+version: "2.0"
+
+stories:
+
+- story: chào - tên - hỏi - hỏi - bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: give_name
+  - action: utter_givename
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: ask_lottery
+  - action: action_get_lottery
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: Tên - hỏi kq 
+  steps:
+  - intent: give_name
+  - action: utter_givename
+  - intent: ask_lottery
+  - action: action_get_lottery
+
+
+- story: Chào - hỏi kq - bye
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_lottery
+  - action: action_get_lottery
+  - intent: goodbye
+  - action: utter_goodbye
+

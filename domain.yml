@@ -1,0 +1,42 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - mood_great
+  - bot_challenge
+  - give_name
+  - ask_lottery
+entities:
+  - cust_sex
+  - cust_name
+
+slots:
+  cust_sex:
+    auto_fill: true
+    type: text
+  cust_name:
+    auto_fill: true
+    type: text
+responses:
+
+  utter_greet:
+    - text: "Xin chào, vui lòng cho tôi biết tên của bạn?"
+
+  utter_givename:
+    - text: "Chào {cust_sex} {cust_name}, em có thể giúp gì cho {cust_sex} {cust_name} được ạ!!!"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+actions:
+  - action_get_lottery
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

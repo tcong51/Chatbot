@@ -1,0 +1,45 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - chào 
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - good afternoon
+- intent: give_name
+  examples: |
+    - [Anh](cust_sex) là [Thành Công](cust_name)
+    - [Chị](cust_sex) là [Hằng](cust_name)
+    - [Em](cust_sex) là [Trang](cust_name)
+    - [Cô](cust_sex) [Vân](cust_name)
+    - [Chú](cust_sex) [Công](cust_name)
+    - [Anh](cust_sex) tên [Công](cust_name)
+
+- intent: goodbye
+  examples: |
+    - goodbye
+    - have a nice day
+    - see you later
+- intent: ask_lottery
+  examples: |
+    - Cho anh xem kết quả đê
+    - Kết quả số xố hôm này thế nào
+    - Mày cho anh hỏi kết quả tý
+    - Có kết quả chưa
+- intent: mood_great
+  examples: |
+    - great
+    - amazing
+    - wonderful
+    - so so perfect
+    - so good
+    - so perfect
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
