@@ -1,45 +1,53 @@
 version: "2.0"
-
 nlu:
+- intent: ask_typeland
+  examples: |
+    - Cây trồng ở [đất mùn](typeland)
+    - [đất mùn](typeland)
+    - Cây trồng ở [đất hữu cơ](typeland)
+    - [đất hữu cơ](typeland)
+- intent: ask_lottery
+  examples: |
+    - Cho xin kết quả cái
+    - kết quả 
+
+- intent: ask_tree_mun
+  examples: |
+    - Cho hỏi cây nào trồng ở đất mùn?
+    - Cây trồng được ở đất mùn
+    - Đất mùn trồng được những cây gì?
+    - Đất mùn
+# - intent: ask_tree_huu_co
+#   examples: |
+#     - Cho hỏi cây nào trồng ở đất hữu cơ?
+#     - Cây trồng được ở đất hữu cơ 
+#     - Đất hữu cơ trồng được những cây gì?
+#     - Đất hữu cơ
 - intent: greet
   examples: |
-    - chào 
+    - hey
     - hello
     - hi
+    - hello there
     - good morning
     - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
     - good afternoon
-- intent: give_name
+- intent: bot_challenge
   examples: |
-    - [Anh](cust_sex) là [Thành Công](cust_name)
-    - [Chị](cust_sex) là [Hằng](cust_name)
-    - [Em](cust_sex) là [Trang](cust_name)
-    - [Cô](cust_sex) [Vân](cust_name)
-    - [Chú](cust_sex) [Công](cust_name)
-    - [Anh](cust_sex) tên [Công](cust_name)
+    - bot
+    - are you a human?
+- intent: ask_test
+  examples: |
+    - What
+    - Who
 
 - intent: goodbye
   examples: |
+    - bye
     - goodbye
-    - have a nice day
-    - see you later
-- intent: ask_lottery
-  examples: |
-    - Cho anh xem kết quả đê
-    - Kết quả số xố hôm này thế nào
-    - Mày cho anh hỏi kết quả tý
-    - Có kết quả chưa
-- intent: mood_great
-  examples: |
-    - great
-    - amazing
-    - wonderful
-    - so so perfect
-    - so good
-    - so perfect
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?

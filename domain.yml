@@ -1,42 +1,59 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - mood_great
-  - bot_challenge
-  - give_name
-  - ask_lottery
-entities:
-  - cust_sex
-  - cust_name
-
-slots:
-  cust_sex:
-    auto_fill: true
-    type: text
-  cust_name:
-    auto_fill: true
-    type: text
-responses:
-
-  utter_greet:
-    - text: "Xin chào, vui lòng cho tôi biết tên của bạn?"
-
-  utter_givename:
-    - text: "Chào {cust_sex} {cust_name}, em có thể giúp gì cho {cust_sex} {cust_name} được ạ!!!"
-
-  utter_did_that_help:
-    - text: "Did that help you?"
-
-  utter_goodbye:
-    - text: "Bye"
-
-  utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
-
-actions:
-  - action_get_lottery
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+
+intents:
+- ask_typeland:
+    use_entities: true
+- ask_test:
+    use_entities: true
+- ask_lottery:
+    use_entities: true
+- greet:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_tree_mun:
+    use_entities: true
+- ask_tree_huu_co:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- ask_tree_cat:
+    use_entities: true
+entities:
+- typeland
+# - treename
+slots:
+ typeland:
+  type: text
+  auto_fill: true
+#  treename:
+#   type: text
+#   auto_fill: true
+
+
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_typeland:
+  - text: "Web chưa tải được thông tin !{feedback}"
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_land_mun
+- action_get_lottery
+- action_typeland
+
+
+forms: {}
+e2e_actions: []

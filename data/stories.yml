@@ -1,34 +1,29 @@
 version: "2.0"
-
 stories:
-
-- story: chào - tên - hỏi - hỏi - bye
+#story test
+- story: teststory
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: give_name
-  - action: utter_givename
-  - intent: bot_challenge
-  - action: utter_iamabot
-  - intent: ask_lottery
-  - action: action_get_lottery
-  - intent: goodbye
-  - action: utter_goodbye
+  - intent: ask_typeland
+  - action: action_typeland
 
-- story: Tên - hỏi kq 
-  steps:
-  - intent: give_name
-  - action: utter_givename
-  - intent: ask_lottery
-  - action: action_get_lottery
+# # # #
+# - story: ask all
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_lottery
+#   - action: action_get_lottery
+# - story: all *
+#   steps:
+#   - intent: ask_lottery
+#   - action: action_get_lottery
+#   - intent: ask_tree_mun
+#   - action: action_land_mun
+# - story: tree land
+#   steps:
+#   - intent: ask_tree_mun
+#   - action: action_land_mun
 
-
-- story: Chào - hỏi kq - bye
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_lottery
-  - action: action_get_lottery
-  - intent: goodbye
-  - action: utter_goodbye
 
