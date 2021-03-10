@@ -6,54 +6,86 @@ session_config:
   carry_over_slots_to_new_session: true
 
 intents:
-- ask_typeland:
+- ask_area:
     use_entities: true
-- ask_test:
+- ask_benefit:
     use_entities: true
-- ask_lottery:
+- ask_climate:
+    use_entities: true
+- ask_growthtime:
+    use_entities: true
+- ask_humidity:
+    use_entities: true
+- ask_landtype:
+    use_entities: true
+- ask_light:
+    use_entities: true
+- ask_species:
     use_entities: true
 - greet:
     use_entities: true
 - bot_challenge:
     use_entities: true
-- ask_tree_mun:
-    use_entities: true
-- ask_tree_huu_co:
-    use_entities: true
 - goodbye:
     use_entities: true
-- ask_tree_cat:
-    use_entities: true
+
 entities:
-- typeland
-# - treename
+- area
+- benefit
+- climate
+- growthtime
+- humidity
+- landtype
+- light
+- species
+
 slots:
- typeland:
+ area:
   type: text
   auto_fill: true
-#  treename:
-#   type: text
-#   auto_fill: true
+ benefit:
+  type: text
+  auto_fill: true
+ climate:
+  type: text
+  auto_fill: true
+ growthtime:
+  type: text
+  auto_fill: true
+ humidity:
+  type: text
+  auto_fill: true
+ landtype:
+  type: text
+  auto_fill: true
+ light:
+  type: text
+  auto_fill: true
+ species:
+  type: text
+  auto_fill: true
 
 
 responses:
   utter_greet:
-  - text: Hey! How are you?
+  - text: Hey! Rất vui được gặp bạn?
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
   - text: Great, carry on!
-  utter_typeland:
-  - text: "Web chưa tải được thông tin !{feedback}"
   utter_goodbye:
   - text: Bye
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
 actions:
-- action_land_mun
-- action_get_lottery
-- action_typeland
-
+- action_area
+- action_benefit
+- action_climate
+- action_growthtime
+- action_humidity
+- action_landtype
+- action_light
+- action_species
 
 forms: {}
 e2e_actions: []

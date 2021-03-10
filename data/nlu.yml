@@ -1,51 +1,81 @@
 version: "2.0"
 nlu:
-- intent: ask_typeland
+#Khu vực
+- intent: ask_area
   examples: |
-    - Cây trồng ở [đất mùn](typeland)
-    - [đất mùn](typeland)
-    - Cây trồng ở [đất hữu cơ](typeland)
-    - [đất hữu cơ](typeland)
-- intent: ask_lottery
+    - Các cây trồng ở khu vực [ĐBSCL](area)
+    - [ĐBSCL](area)
+    - Các cây trồng ở khu vực [ĐBSH](area)
+    - [ĐBSH](area)
+#Công dụng
+- intent: ask_benefit
   examples: |
-    - Cho xin kết quả cái
-    - kết quả 
+    - Các cây trồng dùng để [che mát](benefit)
+    - Cây [che mát](benefit)
+    - Các cây trồng dùng để [cải tạo đất](benefit)
+    - Cây [cải tạo đất](benefit)
+    - Các cây trồng dùng để [cố định đất ven sông](benefit)
+    - Cây [cố định đất ven sông](benefit)
+#Khí hậu  
+- intent: ask_climate
+  examples: |
+    - Các cây trồng ở khí hậu [khô nóng](climate)
+    - [Khô nóng](climate)
+    - Các cây trồng ở khí hậu [mát mẻ](climate)
+    - [Mát mẻ](climate)
+#Thời gian sinh trưởng
+- intent: ask_growthtime
+  examples: |
+    - Các cây trồng [ngắn ngày](growthtime)
+    - Cây [ngắn ngày](growthtime)
+    - Các cây trồng [dài ngày](growthtime)
+    - Cây [dài ngày](growthtime)
+#Độ ẩm
+- intent: ask_humidity
+  examples: |
+    - Các cây trồng cần độ ẩm [cao](humidity)
+    - Độ ẩm [cao](humidity)
+    - Các cây trồng cần độ ẩm [trung bình](humidity)
+    - Độ ẩm [trung bình](humidity)
+    - Các cây trồng cần độ ẩm [thấp](humidity)
+    - Độ ẩm [thấp](humidity)
+#Loại đất
+- intent: ask_landtype
+  examples: |
+    - Những cây trồng ở [đất mùn](landtype)
+    - Các loại cây trồng trên [đất mùn](landtype)
+    - Những cây trồng ở [đất phù sa](landtype)
+    - Các loại cây trồng trên [đất phù sa](landtype)
+    - Những cây trồng ở [đất cát](landtype)
+    - Các loại cây trồng trên [đất cát](landtype)
+    - Những cây trồng ở [đất phèn](landtype)
+    - Các loại cây trồng trên [đất phèn](landtype)
+#Ánh sáng
+- intent: ask_light
+  examples: |
+    - Cây trồng ở điều kiện [nắng nhiều](light)
+    - Khu vực có [nắng nhiều](light) trồng được cây nào?
+    - Cây trồng ở điều kiện [bóng râm](light) 
+    - Khu vực có [bóng râm](light) trồng được cây nào? 
+#Loại đất
+- intent: ask_species
+  examples: |
+    - Cây trồng thuộc loại [thân gỗ](species)
+    - Cây trồng thuộc loại [kiểng](species)
+    - Cây trồng thuộc loại [thảo dược](species)
+    - Cây trồng thuộc loại [ăn quả](species)
+    - Cây trồng thuộc loại [dây leo](species)
 
-- intent: ask_tree_mun
-  examples: |
-    - Cho hỏi cây nào trồng ở đất mùn?
-    - Cây trồng được ở đất mùn
-    - Đất mùn trồng được những cây gì?
-    - Đất mùn
-# - intent: ask_tree_huu_co
-#   examples: |
-#     - Cho hỏi cây nào trồng ở đất hữu cơ?
-#     - Cây trồng được ở đất hữu cơ 
-#     - Đất hữu cơ trồng được những cây gì?
-#     - Đất hữu cơ
 - intent: greet
   examples: |
     - hey
     - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+ 
 - intent: bot_challenge
   examples: |
     - bot
     - are you a human?
-- intent: ask_test
-  examples: |
-    - What
-    - Who
 
 - intent: goodbye
   examples: |

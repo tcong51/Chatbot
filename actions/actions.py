@@ -7,28 +7,236 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-
 from typing import Any, Text, Dict, List
-
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 # from rasa_sdk.forms import FormAction
 import mysql.connector
 import feedparser
 #-------------------------------------------------------------------------------------------------------------
-class action_typeland(Action):
+# #--------------------------------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------------------------------------
+# #-------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+class action_area(Action):
 
     def name(self):
-        return "action_typeland"
+        return "action_area"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        typeLandVariable = tracker.get_slot("typeland")
+        areaVariable = tracker.get_slot("area")
+        areaArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfArea = "SELECT * FROM area WHERE Area LIKE '{}'".format(areaVariable)
+        curTree.execute(codeOfArea)
+        result = curTree.fetchall()
+        for x in result:
+            areaArray.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        # Code của area
+        codeOfVariable = areaArray[0]
+        
+        treeReturn = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        treeOfArea = "SELECT * FROM db_trees WHERE Area LIKE '%{}%'".format(codeOfVariable)
+        curTree.execute(treeOfArea)  
+        result = curTree.fetchall()
+        for x in result:
+            treeReturn.append(x[1])
+        myconn.rollback()
+        myconn.close()
+        dispatcher.utter_message("Các cây trồng có thể trồng ở khu vực "+ areaVariable + " là:")
+        for x in treeReturn:
+            dispatcher.utter_message(x)  
+        return []
+
+
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #-------------------------------------------------------------------------------------------------------------
+class action_benefit(Action):
+
+    def name(self):
+        return "action_benefit"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        benefitVariable = tracker.get_slot("benefit")
+        benefitArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfArea = "SELECT * FROM benefit WHERE Benefit LIKE '{}'".format(benefitVariable)
+        curTree.execute(codeOfArea)
+        result = curTree.fetchall()
+        for x in result:
+            benefitArray.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        # Code của benefit
+        codeOfVariable = benefitArray[0]
+        
+        treeReturn = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        treeOfBenefit = "SELECT * FROM db_trees WHERE Benefit LIKE '%{}%'".format(codeOfVariable)
+        curTree.execute(treeOfBenefit)  
+        result = curTree.fetchall()
+        for x in result:
+            treeReturn.append(x[1])
+        myconn.rollback()
+        myconn.close()
+        dispatcher.utter_message("Các cây trồng dùng để "+ benefitVariable + " là:")
+        for x in treeReturn:
+            dispatcher.utter_message(x)  
+        return []
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+class action_climate(Action):
+
+    def name(self):
+        return "action_climate"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        climateVariable = tracker.get_slot("climate")
+        climateArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfClimate = "SELECT * FROM climate WHERE Climate LIKE '{}'".format(climateVariable)
+        curTree.execute(codeOfClimate)
+        result = curTree.fetchall()
+        for x in result:
+            climateArray.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        # Code của loại đất
+        codeOfVariable = climateArray[0]
+        
+        treeReturn = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        treeOfClimate = "SELECT * FROM db_trees WHERE Climate LIKE '%{}%'".format(codeOfVariable)
+        curTree.execute(treeOfClimate)  
+        result = curTree.fetchall()
+        for x in result:
+            treeReturn.append(x[1])
+        myconn.rollback()
+        myconn.close()
+        dispatcher.utter_message("Các cây trồng có thể trồng ở khí hậu "+ climateVariable + " là:")
+        for x in treeReturn:
+            dispatcher.utter_message(x)  
+        return []
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+
+class action_growthtime(Action):
+
+    def name(self):
+        return "action_growthtime"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        growthtimeVariable = tracker.get_slot("growthtime")
+        growthtimeArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfGrowthTime = "SELECT * FROM growthtime WHERE Growthtime LIKE '{}'".format(growthtimeVariable)
+        curTree.execute(codeOfGrowthTime)
+        result = curTree.fetchall()
+        for x in result:
+            growthtimeArray.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        # Code của loại đất
+        codeOfVariable = growthtimeArray[0]
+        
+        treeReturn = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        treeOfGrowthtime = "SELECT * FROM db_trees WHERE Growthtime LIKE '%{}%'".format(codeOfVariable)
+        curTree.execute(treeOfGrowthtime)  
+        result = curTree.fetchall()
+        for x in result:
+            treeReturn.append(x[1])
+        myconn.rollback()
+        myconn.close()
+        dispatcher.utter_message("Các cây trồng   "+ growthtimeVariable + " là:")
+        for x in treeReturn:
+            dispatcher.utter_message(x)  
+        return []
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+class action_humidity(Action):
+
+    def name(self):
+        return "action_humidity"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        humidityVariable = tracker.get_slot("humidity")
+        humidityArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfHumidity = "SELECT * FROM humidity WHERE Humidity LIKE '{}'".format(humidityVariable)
+        curTree.execute(codeOfHumidity)
+        result = curTree.fetchall()
+        for x in result:
+            humidityArray.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        # Code của loại đất
+        codeOfVariable = humidityArray[0]
+        
+        treeReturn = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        treeOfHumidity = "SELECT * FROM db_trees WHERE Humidity LIKE '%{}%'".format(codeOfVariable)
+        curTree.execute(treeOfHumidity)  
+        result = curTree.fetchall()
+        for x in result:
+            treeReturn.append(x[1])
+        myconn.rollback()
+        myconn.close()
+        dispatcher.utter_message("Các cây trồng sống được ở độ ẩm "+ humidityVariable + " là:")
+        for x in treeReturn:
+            dispatcher.utter_message(x)  
+        return []
+
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+class action_landtype(Action):
+
+    def name(self):
+        return "action_landtype"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        typeLandVariable = tracker.get_slot("landtype")
         typeLandArray= [] 
         myconn = mysql.connector.connect(host = "localhost", user = "root", 
             passwd = "",database="data_trees")
@@ -54,29 +262,96 @@ class action_typeland(Action):
             treeReturn.append(x[1])
         myconn.rollback()
         myconn.close()
-        dispatcher.utter_message("Các cây trồng có thể trồng trên "+ typeLandVariable + " là:")
+        dispatcher.utter_message("Các cây trồng  "+ typeLandVariable + " là:")
         for x in treeReturn:
             dispatcher.utter_message(x)  
         return []
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+class action_light(Action):
 
-#------------------------------------------------------------------------------------------------------------------
+    def name(self):
+        return "action_light"
 
-# class action_get_lottery(Action):
-#    def name(self):
-#           return 'action_get_lottery'
-#    def run(self, dispatcher, tracker:Tracker, domain)-> List[Text]:
-#             # Khai bao dia chi luu tru ket qua so xo. O day lam vi du nen minh lay ket qua SX Mien Bac
-#             url = 'https://xskt.com.vn/rss-feed/mien-bac-xsmb.rss'
-#             # Tien hanh lay thong tin tu URL
-#             feed_cnt = feedparser.parse(url)
-#             # Lay ket qua so xo moi nhat
-#             first_node = feed_cnt['entries']
-#             # Lay thong tin ve ngay va chi tiet cac giai
-#             return_msg = first_node[0]['title'] + "\n" + first_node[0]['description']
-#             # Tra ve cho nguoi dung
-#             dispatcher.utter_message(return_msg)
-#             return []
-# #-------------------------------------------------------------------------------------------------------------
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        lightVariable = tracker.get_slot("light")
+        lightArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfLight = "SELECT * FROM light WHERE Light LIKE '{}'".format(lightVariable)
+        curTree.execute(codeOfLight)
+        result = curTree.fetchall()
+        for x in result:
+            lightArray.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        # Code của loại đất
+        codeOfVariable = lightArray[0]
+        
+        treeReturn = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        treeOfLight = "SELECT * FROM db_trees WHERE Light LIKE '%{}%'".format(codeOfVariable)
+        curTree.execute(treeOfLight)  
+        result = curTree.fetchall()
+        for x in result:
+            treeReturn.append(x[1])
+        myconn.rollback()
+        myconn.close()
+        dispatcher.utter_message("Các cây trồng dưới điều kiện "+ lightVariable + " là:")
+        for x in treeReturn:
+            dispatcher.utter_message(x)  
+        return []
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+class action_species(Action):
+
+    def name(self):
+        return "action_species"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        speciesVariable = tracker.get_slot("species")
+        speciesArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfSpecies = "SELECT * FROM species WHERE Species LIKE '{}'".format(speciesVariable)
+        curTree.execute(codeOfSpecies)
+        result = curTree.fetchall()
+        for x in result:
+            speciesArray.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        # Code của loại đất
+        codeOfVariable = speciesArray[0]
+        
+        treeReturn = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        treeOfSpecies = "SELECT * FROM db_trees WHERE Species LIKE '%{}%'".format(codeOfVariable)
+        curTree.execute(treeOfSpecies)  
+        result = curTree.fetchall()
+        for x in result:
+            treeReturn.append(x[1])
+        myconn.rollback()
+        myconn.close()
+        dispatcher.utter_message("Các cây trồng thuộc loại "+ speciesVariable + " là:")
+        for x in treeReturn:
+            dispatcher.utter_message(x)  
+        return []
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
 
 # class action_land_mun(Action):
 #   def name(self):
@@ -122,3 +397,18 @@ class action_typeland(Action):
 #               dispatcher.utter_message(name)
 #             return []
 #-------------------------------------------------------------------------------------------------------------
+# class action_get_lottery(Action):
+#    def name(self):
+#           return 'action_get_lottery'
+#    def run(self, dispatcher, tracker:Tracker, domain)-> List[Text]:
+#             # Khai bao dia chi luu tru ket qua so xo. O day lam vi du nen minh lay ket qua SX Mien Bac
+#             url = 'https://xskt.com.vn/rss-feed/mien-bac-xsmb.rss'
+#             # Tien hanh lay thong tin tu URL
+#             feed_cnt = feedparser.parse(url)
+#             # Lay ket qua so xo moi nhat
+#             first_node = feed_cnt['entries']
+#             # Lay thong tin ve ngay va chi tiet cac giai
+#             return_msg = first_node[0]['title'] + "\n" + first_node[0]['description']
+#             # Tra ve cho nguoi dung
+#             dispatcher.utter_message(return_msg)
+#             return []

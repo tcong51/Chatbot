@@ -1,29 +1,41 @@
 version: "2.0"
 stories:
-#story test
-- story: teststory
+#story
+- story: teststory1
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: ask_typeland
-  - action: action_typeland
+  - action: utter_did_that_help
+  - intent: ask_area
+  - action: action_area
+- story: teststory2
+  steps:
+  - intent: ask_benefit
+  - action: action_benefit
+- story: teststory3
+  steps:
+  - intent: ask_climate
+  - action: action_climate
+- story: teststory4
+  steps:
+  - intent: ask_growthtime
+  - action: action_growthtime
+- story: teststory5
+  steps:
+  - intent: ask_humidity
+  - action: action_humidity
+- story: teststory6 
+  steps:
+  - intent: ask_landtype
+  - action: action_landtype
+- story: teststory7
+  steps:
+  - intent: ask_light
+  - action: action_light
+- story: teststory8
+  steps:
+  - intent: ask_species
+  - action: action_species
 
-# # # #
-# - story: ask all
-#   steps:
-#   - intent: greet
-#   - action: utter_greet
-#   - intent: ask_lottery
-#   - action: action_get_lottery
-# - story: all *
-#   steps:
-#   - intent: ask_lottery
-#   - action: action_get_lottery
-#   - intent: ask_tree_mun
-#   - action: action_land_mun
-# - story: tree land
-#   steps:
-#   - intent: ask_tree_mun
-#   - action: action_land_mun
 
 
