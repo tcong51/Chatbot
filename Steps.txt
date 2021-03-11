@@ -8,7 +8,7 @@
 6. webchat : rasa run --model models --enable-api --cors "*"
 //
 --------------------------- cài đặt chatbot trên trang web---------------------- 
-1. Trong code tải từ github index.html là trang web dùng dể test
+1. Trong code tải từ github index.html là trang web dùng dể test ( địa chỉ github : https://github.com/tcong51/Chatbot)
 2. Từ trang web ngẫu nhiên đoạn <script> </script> trong https://github.com/botfront/rasa-webchat, thay đổi địa api đến con chatbot của mình ( tùy theo các bạn đặt liên kết api , mặc định là socketUrl: "http://localhost:5005").
  - video kèm theo.
  - kèm theo bật action_endpoint: trong endpoints.yml nha.
