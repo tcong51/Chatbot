@@ -19,7 +19,7 @@
 - Mở trang index.html bằng trình duyệt và chat thử.
 - video kèm theo.
 Gook luck!!
-Mọi người chú ý ! Từ Desktop/rasa là thư mục rasa chứ chatbot của mình nha.
-- conda activate rasa ( là mình tạo môi trường python ảo cho nó ngay từ đầu , để mn sau khi đã tạo chatbot mà thêm mt ảo là t k chịu trách nhiệm ^^)
-- conda activate ( đối với run model ... để khởi động api của chatbot nha, là mt base đó. Chú ý nha!!) Thanksfor!!
+Mọi người chú ý ! Từ Desktop/rasa là thư mục rasa chứa chatbot của mình nha.
+- conda activate rasa ( Là mình tạo môi trường python ảo cho nó ngay từ đầu, để mọi người sau khi đã tạo chatbot mà thêm môi trường ảo mà error là tôi không chịu trách nhiệm ^^)
+- conda activate ( Đối với run model ... để khởi động api của chatbot nha, là môi trường base đó. Chú ý nha!!) Thanksfor!!
 Hi vọng giúp được mọi người.
