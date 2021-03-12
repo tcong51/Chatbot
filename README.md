@@ -8,7 +8,7 @@
 5. cài rasa ( pip install rasa) hoặc rasa x : pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
 6. webchat : rasa run --model models --enable-api --cors "*"
 
-# cài đặt chatbot trên trang web
+# Cài đặt chatbot trên trang web
 1. Trong code tải từ github index.html là trang web dùng dể test
 2. Từ trang web ngẫu nhiên đoạn <script> </script> trong https://github.com/botfront/rasa-webchat, thay đổi địa api đến con chatbot của mình ( tùy theo các bạn đặt liên kết api , mặc định là socketUrl: "http://localhost:5005").
  - video kèm theo.
