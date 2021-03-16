@@ -34,11 +34,11 @@ nlu:
 - intent: ask_humidity
   examples: |
     - Các cây trồng cần độ ẩm [cao](humidity)
-    - Độ ẩm [cao](humidity)
+    - Cây thuộc khu vực độ ẩm [cao](humidity)
     - Các cây trồng cần độ ẩm [trung bình](humidity)
-    - Độ ẩm [trung bình](humidity)
+    - Cây thuộc khu vực độ ẩm độ ẩm [trung bình](humidity)
     - Các cây trồng cần độ ẩm [thấp](humidity)
-    - Độ ẩm [thấp](humidity)
+    - Cây thuộc khu vực độ ẩm [thấp](humidity)
 #Loại đất
 - intent: ask_landtype
   examples: |
@@ -65,18 +65,120 @@ nlu:
     - Cây trồng thuộc loại [thảo dược](species)
     - Cây trồng thuộc loại [ăn quả](species)
     - Cây trồng thuộc loại [dây leo](species)
-
+# Condition
+- intent: ask_condition
+  examples: |
+    - [ĐBSCL](conditionfirst) và [cải tạo đất](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [che mát](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [cố định đất ven sông](conditionsecond)
+    - [cải tạo đất](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [che mát](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [cố định đất ven sông](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ĐBSH](conditionfirst) và [cải tạo đất](conditionsecond)
+    - [ĐBSH](conditionfirst) và [che mát](conditionsecond)
+    - [ĐBSH](conditionfirst) và [cố định đất ven sông](conditionsecond)
+    - [cải tạo đất](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [che mát](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [cố định đất ven sông](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [cải tạo đất](conditionfirst) và [ĐBSH](conditionsecond)
+    - [che mát](conditionfirst) và [ĐBSH](conditionsecond)
+    - [cố định đất ven sông](conditionfirst) và [ĐBSH](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [khô nóng](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [mát mẻ](conditionsecond)
+    - [khô nóng](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [mát mẻ](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ĐBSH](conditionfirst) và [khô nóng](conditionsecond)    
+    - [ĐBSH](conditionfirst) và [mát mẻ](conditionsecond)
+    - [khô nóng](conditionfirst) và [ĐBSH](conditionsecond)    
+    - [mát mẻ](conditionfirst) và [ĐBSH](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [ngắn ngày](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [dài ngày](conditionsecond)
+    - [ngắn ngày](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [dài ngày](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ĐBSH](conditionfirst) và [ngắn ngày](conditionsecond)    
+    - [ĐBSH](conditionfirst) và [dài ngày](conditionsecond)
+    - [dài ngày](conditionfirst) và [ĐBSH](conditionsecond)    
+    - [dài ngày](conditionfirst) và [ĐBSH](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [cao](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [thấp](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [trung bình](conditionsecond)
+    - [cao](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [thấp](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [trung bình](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ĐBSH](conditionfirst) và [cao](conditionsecond)
+    - [ĐBSH](conditionfirst) và [thấp](conditionsecond)
+    - [ĐBSH](conditionfirst) và [trung bình](conditionsecond)
+    - [cao](conditionfirst) và [ĐBSH](conditionsecond)
+    - [thấp](conditionfirst) và [ĐBSH](conditionsecond)
+    - [trung bình](conditionfirst) và [ĐBSH](conditionsecond)       
+    - [ĐBSCL](conditionfirst) và [đất mùn](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [đất phù sa](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [đất phèn](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [đất cát](conditionsecond)
+    - [đất mùn](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [đất phù sa](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [đất phèn](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [đất cát](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ĐBSH](conditionfirst) và [đất mùn](conditionsecond)
+    - [ĐBSH](conditionfirst) và [đất phù sa](conditionsecond)
+    - [ĐBSH](conditionfirst) và [đất phèn](conditionsecond)
+    - [ĐBSH](conditionfirst) và [đất cát](conditionsecond)
+    - [đất mùn](conditionfirst) và [ĐBSH](conditionsecond)
+    - [đất phù sa](conditionfirst) và [ĐBSH](conditionsecond)
+    - [đất phèn](conditionfirst) và [ĐBSH](conditionsecond)
+    - [đất cát](conditionfirst) và [ĐBSH](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [nắng nhiều](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [bóng râm](conditionsecond)
+    - [nắng nhiều](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [bóng râm](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ĐBSH](conditionfirst) và [nắng nhiều](conditionsecond)
+    - [ĐBSH](conditionfirst) và [bóng râm](conditionsecond)
+    - [nắng nhiều](conditionfirst) và [ĐBSH](conditionsecond)
+    - [bóng râm](conditionfirst) và [ĐBSH](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [kiểng](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [thảo dược](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [ăn quả](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [dây leo](conditionsecond)
+    - [ĐBSCL](conditionfirst) và [thân gỗ](conditionsecond)
+    - [kiểng](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [thảo dược](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ăn quả](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [dây leo](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [thân gỗ](conditionfirst) và [ĐBSCL](conditionsecond)
+    - [ĐBSH](conditionfirst) và [kiểng](conditionsecond)
+    - [ĐBSH](conditionfirst) và [thảo dược](conditionsecond)
+    - [ĐBSH](conditionfirst) và [ăn quả](conditionsecond)
+    - [ĐBSH](conditionfirst) và [dây leo](conditionsecond)
+    - [ĐBSH](conditionfirst) và [thân gỗ](conditionsecond)
+    - [kiểng](conditionfirst) và [ĐBSH](conditionsecond)
+    - [thảo dược](conditionfirst) và [ĐBSH](conditionsecond)
+    - [ăn quả](conditionfirst) và [ĐBSH](conditionsecond)
+    - [dây leo](conditionfirst) và [ĐBSH](conditionsecond)
+    - [thân gỗ](conditionfirst) và [ĐBSH](conditionsecond)
+    - [cải tạo đất](conditionfirst) và [khô nóng](conditionsecond)
+    - [che mát](conditionfirst) và [khô nóng](conditionsecond)
+    - [cố định đất ven sông](conditionfirst) và [khô nóng](conditionsecond)
+    - [cải tạo đất](conditionfirst) và [mát mẻ](conditionsecond)
+    - [che mát](conditionfirst) và [mát mẻ](conditionsecond)
+    - [cố định đất ven sông](conditionfirst) và [mát mẻ](conditionsecond)
+    - [khô nóng](conditionfirst) và [cải tạo đất](conditionsecond)
+    - [khô nóng](conditionfirst) và [che mát](conditionsecond)
+    - [khô nóng](conditionfirst) và [cố định đất ven sông](conditionsecond)
+    - [mát mẻ](conditionfirst) và [cải tạo đất](conditionsecond)
+    - [mát mẻ](conditionfirst) và [che mát](conditionsecond)
+    - [mát mẻ](conditionfirst) và [cố định đất ven sông](conditionsecond)
+# Chào
 - intent: greet
   examples: |
     - hey
     - hello
     - hi
- 
+# Bot
 - intent: bot_challenge
   examples: |
     - bot
     - are you a human?
-
+# Tạm biệt
 - intent: goodbye
   examples: |
     - bye

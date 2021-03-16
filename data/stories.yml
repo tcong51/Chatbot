@@ -36,6 +36,10 @@ stories:
   steps:
   - intent: ask_species
   - action: action_species
+- story: teststory9
+  steps:
+  - intent: ask_condition
+  - action: action_condition
 
 
 

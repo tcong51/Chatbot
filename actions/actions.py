@@ -75,8 +75,8 @@ class action_benefit(Action):
         myconn = mysql.connector.connect(host = "localhost", user = "root", 
             passwd = "",database="data_trees")
         curTree =myconn.cursor()
-        codeOfArea = "SELECT * FROM benefit WHERE Benefit LIKE '{}'".format(benefitVariable)
-        curTree.execute(codeOfArea)
+        codeOfBenefit = "SELECT * FROM benefit WHERE Benefit LIKE '{}'".format(benefitVariable)
+        curTree.execute(codeOfBenefit)
         result = curTree.fetchall()
         for x in result:
             benefitArray.append(x[0])
@@ -241,7 +241,7 @@ class action_landtype(Action):
         myconn = mysql.connector.connect(host = "localhost", user = "root", 
             passwd = "",database="data_trees")
         curTree =myconn.cursor()
-        codeOfLand = "SELECT * FROM landtype WHERE LandName LIKE '{}'".format(typeLandVariable)
+        codeOfLand = "SELECT * FROM landtype WHERE Landtype LIKE '{}'".format(typeLandVariable)
         curTree.execute(codeOfLand)
         result = curTree.fetchall()
         for x in result:
@@ -250,7 +250,6 @@ class action_landtype(Action):
         myconn.close()
         # Code của loại đất
         codeOfVariable = typeLandArray[0]
-        
         treeReturn = []
         myconn = mysql.connector.connect(host = "localhost", user = "root", 
                     passwd = "",database="data_trees")
@@ -351,52 +350,276 @@ class action_species(Action):
         return []
 # #--------------------------------------------------------------------------------------------------------------
 # #--------------------------------------------------------------------------------------------------------------
+class action_condition(Action):
+
+    def name(self):
+        return "action_condition"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:                        
+        area = []
+        benefit = []
+        climate = []
+        growthtime = []
+        humidity = []
+        landtype = []
+        light = []
+        species = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Area FROM area"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            area.append(x[0].lower())
+        
+        #
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Benefit FROM benefit"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            benefit.append(x[0].lower())        
+        
+        #
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Climate FROM climate"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            climate.append(x[0].lower())        
+        
+        #
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Growthtime FROM growthtime"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            growthtime.append(x[0].lower())        
+        
+        #
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Humidity FROM humidity"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            humidity.append(x[0].lower())        
+        
+        #
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Landtype FROM landtype"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            landtype.append(x[0].lower())        
+        
+
+        #
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Light FROM light"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            light.append(x[0].lower())        
+        
+        #
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        commandGiveData = "SELECT Species FROM species"
+        curTree.execute(commandGiveData)  
+        result = curTree.fetchall()
+        for x in result:
+            species.append(x[0].lower())    
+        #
+        lenArea = len(area)
+        lenBenefit= len(benefit)
+        lenClimate = len(climate)      
+        lenGrowthtime = len(growthtime)
+        lenHumidity = len(humidity)
+        lenLandtype = len(landtype)
+        lenLight = len(light)
+        lenSpecies= len(species)
+        lenArray = [lenArea, lenBenefit, lenClimate, lenGrowthtime, lenHumidity, lenLandtype, lenLight, lenSpecies]
+        lenArray.sort(reverse=True)
+        lenUse = lenArray[0]+5
+
+    # Condition from data of chatbot with user
+        # Command Support--------------------------------------------------------------------------      
+        def commandSupport(x):
+            support = ''
+            for i in range(0,lenUse):
+                try:
+                    if(x == humidity[i]):                          
+                        support = 'Humidity'
+                        break                        
+                    else:
+                        if(x == benefit[i]):                                  
+                            support = 'Benefit'
+                            break
+                        else:
+                            if(x == climate[i]):                                       
+                                support = 'Climate'
+                                break
+                            else:
+                                if(x == growthtime[i]):
+                                    support = 'Growthtime'
+                                    break
+                                else:
+                                    if ( x == light[i]):
+                                        support = 'Light'
+                                        break
+                                    else:
+                                        if(x == area[i]):        
+                                            support = 'Area'
+                                            break           
+                except: 
+                    break
+            return support
+        # name Table on Database-------------------------------------------------------------------------
+        def commandNameTableOfCondition(x):
+            nameTable = ''
+            for i in range(0,lenUse):
+                try:
+                    if ( x == species[i]): 
+                        nameTable = 'species'
+                        break
+                    else:
+                        if(x ==landtype[i]):         
+                            nameTable = 'landtype'
+                            break
+                        else:
+                            nameTable = commandSupport(x).lower()  
+                except: 
+                    break
+            return nameTable    
+        #Name Column on Table Database-------------------------------------------------------------------
+        def commandNameColumnOfCondition(x):
+            nameColumn =''
+            for i in range(0,lenUse):
+                try:
+                    if (x == species[i]):
+                            nameColumn = 'Species'
+                            break
+                    else:
+                        if(x ==landtype[i]):
+                            nameColumn = 'Landtype'
+                            # nameColumn = landtype[i]
+                            break                      
+                        else:
+                            nameColumn = commandSupport(x)            
+                except:          
+                    break
+            return nameColumn
+        # -----------------------------------------------------------------------------------------------------------       
+        conditionFirstVariable = tracker.get_slot("conditionfirst").lower()
+        conditionSecondVariable = tracker.get_slot("conditionsecond").lower()
+        nameTableOfConditionFirst = commandNameTableOfCondition(conditionFirstVariable)
+        nameTableOfConditionSecond = commandNameTableOfCondition(conditionSecondVariable)
+        nameColumnOfConditionFirst = commandNameColumnOfCondition(conditionFirstVariable)
+        nameColumnOfConditionSecond = commandNameColumnOfCondition(conditionSecondVariable)
+        # codeOfTypeCondition = "SELECT * FROM {} WHERE {} LIKE '{}'".format(nameTableOfConditionFirst,nameColumnOfConditionFirst,conditionFirstVariable)
+        # print(codeOfTypeCondition)
+        # codeOfTypeCondition2 = "SELECT * FROM {} WHERE {} LIKE '{}'".format(nameTableOfConditionSecond,nameColumnOfConditionSecond,conditionSecondVariable)
+        # print(codeOfTypeCondition2)
+        #---------------------------------------------------------------------------
+        arrTreeFirstReturn = []
+        def listTreesOfConditionFirst(table,column,value):
+            conditionArray= []
+            myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                passwd = "",database="data_trees")
+            curTree =myconn.cursor()
+            codeOfTypeCondition = "SELECT * FROM {} WHERE {} LIKE '{}'".format(table,column,value)
+            curTree.execute(codeOfTypeCondition)
+            result = curTree.fetchall()
+            for x in result:
+                conditionArray.append(x[0])
+            myconn.rollback()
+            myconn.close()
+            codeOfVariable = conditionArray[0]
+            treeReturn = []
+            myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                        passwd = "",database="data_trees")
+            curTree =myconn.cursor()
+            treeOfSpecies = "SELECT * FROM db_trees WHERE {} LIKE '%{}%'".format(column,codeOfVariable)
+            curTree.execute(treeOfSpecies)  
+            result = curTree.fetchall()
+            for x in result:
+                treeReturn.append(x[1])
+            myconn.rollback()
+            myconn.close()
+            for x in treeReturn:
+                arrTreeFirstReturn.append(x)
+        #--------------------------------------------------------------------------
+        arrTreeSecondReturn = []
+        def listTreesOfConditionSecond(table,column,value):
+            conditionArray= []
+            myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                passwd = "",database="data_trees")
+            curTree =myconn.cursor()
+        
+            codeOfTypeCondition = "SELECT * FROM {} WHERE {} LIKE '{}'".format(table,column,value)
+            curTree.execute(codeOfTypeCondition)
+            result = curTree.fetchall()
+            for x in result:
+                conditionArray.append(x[0])
+            myconn.rollback()
+            myconn.close()
+            codeOfVariable = conditionArray[0]
+            treeReturn = []
+            myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                        passwd = "",database="data_trees")
+            curTree =myconn.cursor()
+            treeOfSpecies = "SELECT * FROM db_trees WHERE {} LIKE '%{}%'".format(column,codeOfVariable)
+            curTree.execute(treeOfSpecies)  
+            result = curTree.fetchall()
+            for x in result:
+                treeReturn.append(x[1])
+            myconn.rollback()
+            myconn.close()
+            for x in treeReturn:
+                arrTreeSecondReturn.append(x)
+        #--------------------------------------------------------------------------
+        listTreesOfConditionFirst(nameTableOfConditionFirst, nameColumnOfConditionFirst, conditionFirstVariable)
+        listTreesOfConditionSecond(nameTableOfConditionSecond, nameColumnOfConditionSecond,conditionSecondVariable)        
+        lenOfarrTreeFirstReturn = len(arrTreeFirstReturn)
+        lenOfarrTreeSecondReturn = len(arrTreeSecondReturn)
+        value = False
+        arrTrees = []
+        for i in range(0,lenOfarrTreeFirstReturn):
+            for j in range(0,lenOfarrTreeSecondReturn):
+                try:
+                    if(arrTreeFirstReturn[i] == arrTreeSecondReturn[j]):
+                        # dispatcher.utter_message(arrTreeFirstReturn[i])
+                        arrTrees.append(arrTreeFirstReturn[i])
+                        value = True
+                except:
+                    break
+        # Error hiển thị fix từ dòng này -> return []
+        if(value == True):
+            for i in range(0,len(arrTrees)):
+                dispatcher.utter_message(arrTrees[i])
+        else: 
+            dispatcher.utter_message("0 kết quả cho tìm kiếm này!")
+        return []
+                  
+
 # #--------------------------------------------------------------------------------------------------------------
-
-# class action_land_mun(Action):
-#   def name(self):
-#           return 'action_land_mun'
-#   def run(self,dispatcher, tracker, domain):
-#             trees =[]
-#             nameland = []
-#             n = 1
-#             # tạo đối tượng connection
-#             # Tryền tham số giống như chatbot thông minh, select trong landtype -> code  -> select trong db_trees lấy cây.
-#             myconn = mysql.connector.connect(host = "localhost", user = "root", 
-#                 passwd = "",database="data_trees")
-#             # tạo đối tượng cursor
-#             cur = myconn.cursor()
-#             query = "SELECT * FROM db_trees WHERE LandType LIKE '%{:d}%'".format(n)
-#             # print (query)
-#                 # select dữ liệu từ database
-#             cur.execute(query)
-#             # Chỉ số landtype -> varchar 1,2 ..... tìm loại cây rộng hơn. Nếu cây thuộc 2 loại cây trở lên
-#             # nameland = cur.execute("SELECT LandName FROM landtype WHERE Code='%d'".format(n))
-#             # r = cur.fetchall(nameland)
-#                 # tìm nạp các hàng từ đối tượng con trỏ  
-#             result = cur.fetchall()
-#                 # print(result);
-#             for x in result:
-#                 trees.append(x[1])
-#             myconn.rollback()
-#             myconn.close()
-# #-------------------------------------------------------------------------------------------------------------
-
-#             myconn = mysql.connector.connect(host = "localhost", user = "root", 
-#                 passwd = "",database="data_trees")
-#             cur2 =myconn.cursor()
-#             query = "SELECT * FROM landtype WHERE Code LIKE '%{:d}%'".format(n)
-#             cur2.execute(query)
-#             r = cur2.fetchall()
-#             for x in r:
-#                 nameland.append(x[1])
-# #-------------------------------------------------------------------------------------------------------------
-
-#             dispatcher.utter_message("Các cây trồng có thể trồng trên "+ nameland[0].lower() + " là:")
-#             for name in trees:
-#               dispatcher.utter_message(name)
-#             return []
-#-------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------
 # class action_get_lottery(Action):
 #    def name(self):
 #           return 'action_get_lottery'
@@ -412,3 +635,5 @@ class action_species(Action):
 #             # Tra ve cho nguoi dung
 #             dispatcher.utter_message(return_msg)
 #             return []
+# #--------------------------------------------------------------------------------------------------------------
+# #--------------------------------------------------------------------------------------------------------------

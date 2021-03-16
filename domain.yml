@@ -6,6 +6,8 @@ session_config:
   carry_over_slots_to_new_session: true
 
 intents:
+- ask_condition:
+    use_entities: true
 - ask_area:
     use_entities: true
 - ask_benefit:
@@ -38,6 +40,8 @@ entities:
 - landtype
 - light
 - species
+- conditionfirst
+- conditionsecond
 
 slots:
  area:
@@ -64,6 +68,12 @@ slots:
  species:
   type: text
   auto_fill: true
+ conditionfirst:
+  type: text
+  auto_fill: true
+ conditionsecond:
+  type: text
+  auto_fill: true
 
 
 responses:
@@ -86,6 +96,7 @@ actions:
 - action_landtype
 - action_light
 - action_species
+- action_condition
 
 forms: {}
 e2e_actions: []
