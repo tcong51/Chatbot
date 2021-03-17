@@ -1,9 +1,0 @@
-1. py -m venv env
-2. .\env\Scripts\activate
-3. conda create --name "tên" python=3.X
-4. activate vào môi trường vừa tạo
-4. Nang cap pip : conda install -c anaconda pip
-
-5. cài rasa ( pip install rasa) hoặc rasa x : pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
- 
-6. webchat : rasa run --model models --enable-api --cors "*"

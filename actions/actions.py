@@ -611,13 +611,13 @@ class action_condition(Action):
                     break
         # Error hiển thị fix từ dòng này -> return []
         if(value == True):
+            dispatcher.utter_message("Cây trồng phù hợp với điều kiện "+ conditionFirstVariable.lower() + " và " + conditionSecondVariable.lower() + " là:")
             for i in range(0,len(arrTrees)):
                 dispatcher.utter_message(arrTrees[i])
         else: 
             dispatcher.utter_message("0 kết quả cho tìm kiếm này!")
         return []
                   
-
 # #--------------------------------------------------------------------------------------------------------------
 # #--------------------------------------------------------------------------------------------------------------
 # class action_get_lottery(Action):
