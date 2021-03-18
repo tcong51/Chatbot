@@ -40,6 +40,10 @@ stories:
   steps:
   - intent: ask_condition
   - action: action_condition
+- story: teststory10
+  steps:
+  - intent: ask_name
+  - action: action_name
 
 
 

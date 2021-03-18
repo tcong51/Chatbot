@@ -1,6 +1,17 @@
 version: "2.0"
 nlu:
 #Khu vực
+- intent: ask_name
+  examples: |
+    - [Cây Sala](name) là cây gì?
+    - Cây [chanh leo](name) là cây gì?
+    - Cây [lan hoàng dương](name) là cây gì?
+    - Cây [bưởi năm roi](name) là cây gì?
+    - Cây [chuối hột](name) là cây gì?
+    - [Cây phát tài](name) là cây gì?
+    - Cây [cam sành](name) là cây gì?
+    
+
 - intent: ask_area
   examples: |
     - Các cây trồng ở khu vực [ĐBSCL](area)

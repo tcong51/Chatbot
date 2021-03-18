@@ -24,6 +24,8 @@ intents:
     use_entities: true
 - ask_species:
     use_entities: true
+- ask_name:
+    use_entities: true
 - greet:
     use_entities: true
 - bot_challenge:
@@ -42,8 +44,11 @@ entities:
 - species
 - conditionfirst
 - conditionsecond
-
+- name
 slots:
+ name:
+  type: text
+  auto_fill: true
  area:
   type: text
   auto_fill: true
@@ -97,6 +102,7 @@ actions:
 - action_light
 - action_species
 - action_condition
+- action_name
 
 forms: {}
 e2e_actions: []

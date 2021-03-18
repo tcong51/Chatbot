@@ -351,7 +351,7 @@ class action_species(Action):
 # #--------------------------------------------------------------------------------------------------------------
 # #--------------------------------------------------------------------------------------------------------------
 class action_condition(Action):
-
+    
     def name(self):
         return "action_condition"
 
@@ -532,10 +532,6 @@ class action_condition(Action):
         nameTableOfConditionSecond = commandNameTableOfCondition(conditionSecondVariable)
         nameColumnOfConditionFirst = commandNameColumnOfCondition(conditionFirstVariable)
         nameColumnOfConditionSecond = commandNameColumnOfCondition(conditionSecondVariable)
-        # codeOfTypeCondition = "SELECT * FROM {} WHERE {} LIKE '{}'".format(nameTableOfConditionFirst,nameColumnOfConditionFirst,conditionFirstVariable)
-        # print(codeOfTypeCondition)
-        # codeOfTypeCondition2 = "SELECT * FROM {} WHERE {} LIKE '{}'".format(nameTableOfConditionSecond,nameColumnOfConditionSecond,conditionSecondVariable)
-        # print(codeOfTypeCondition2)
         #---------------------------------------------------------------------------
         arrTreeFirstReturn = []
         def listTreesOfConditionFirst(table,column,value):
@@ -619,6 +615,33 @@ class action_condition(Action):
         return []
                   
 # #--------------------------------------------------------------------------------------------------------------
+class action_name(Action):
+
+    def name(self):
+        return "action_name"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        nameVariable = tracker.get_slot("name")
+        nameArray= [] 
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOf = "SELECT * FROM db_trees WHERE TreeName LIKE '{}'".format(nameVariable.lower())
+        print(codeOf)
+        curTree.execute(codeOf)
+        result = curTree.fetchall()
+        for x in result:
+            nameArray.append(x[2])
+        myconn.rollback()
+        myconn.close()
+        lenArray =  len(nameArray)
+        if(lenArray >= 1):
+            dispatcher.utter_message(nameArray[0])
+        else:
+            dispatcher.utter_message("Không có định nghĩa cho cây trồng này")
+        return []
 # #--------------------------------------------------------------------------------------------------------------
 # class action_get_lottery(Action):
 #    def name(self):
@@ -635,5 +658,4 @@ class action_condition(Action):
 #             # Tra ve cho nguoi dung
 #             dispatcher.utter_message(return_msg)
 #             return []
-# #--------------------------------------------------------------------------------------------------------------
 # #--------------------------------------------------------------------------------------------------------------
