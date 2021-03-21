@@ -624,25 +624,65 @@ class action_name(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         nameVariable = tracker.get_slot("name")
-        nameArray= [] 
+        nameArray= []
+        code  = []
         myconn = mysql.connector.connect(host = "localhost", user = "root", 
             passwd = "",database="data_trees")
         curTree =myconn.cursor()
         codeOf = "SELECT * FROM db_trees WHERE TreeName LIKE '{}'".format(nameVariable.lower())
-        print(codeOf)
+        # print(codeOf)
         curTree.execute(codeOf)
         result = curTree.fetchall()
         for x in result:
             nameArray.append(x[2])
+        for x in result:
+            code.append(x[0])
         myconn.rollback()
         myconn.close()
         lenArray =  len(nameArray)
+        codeF = code[0]
         if(lenArray >= 1):
             dispatcher.utter_message(nameArray[0])
+            
+            dispatcher.utter_message("Để biết thêm thông tin vui lòng đọc thêm tại đây: http://localhost/Github/NienluanCS/detail_trees.php?id=" + str(codeF))
         else:
             dispatcher.utter_message("Không có định nghĩa cho cây trồng này")
         return []
 # #--------------------------------------------------------------------------------------------------------------
+class action_skill(Action):
+
+    def name(self):
+        return "action_skill"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        nameSkillVariable = tracker.get_slot("skill")
+        nameSkillArray= []
+        code = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOf = "SELECT * FROM db_trees WHERE TreeName LIKE '{}'".format(nameSkillVariable.lower())
+        # print(codeOf)
+        curTree.execute(codeOf)
+        result = curTree.fetchall()
+        for x in result:
+            nameSkillArray.append(x[3])
+        for x in result:
+            code.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        codeF = code[0]
+        lenArray =  len(nameSkillArray)
+        if(lenArray >= 1):
+            dispatcher.utter_message(nameSkillArray[0])
+            dispatcher.utter_message("Để biết thêm thông tin vui lòng đọc thêm tại đây: http://localhost/Github/NienluanCS/detail_trees.php?id=" + str(codeF))
+
+        else:
+            dispatcher.utter_message("Xin lỗi cây này chưa có trong CSDL!")
+        return []
+#--------------------------------------------------------------------------------------------------------------
 # class action_get_lottery(Action):
 #    def name(self):
 #           return 'action_get_lottery'

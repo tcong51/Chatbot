@@ -26,6 +26,8 @@ intents:
     use_entities: true
 - ask_name:
     use_entities: true
+- ask_skill:
+    use_entities: true
 - greet:
     use_entities: true
 - bot_challenge:
@@ -45,7 +47,11 @@ entities:
 - conditionfirst
 - conditionsecond
 - name
+- skill
 slots:
+ skill:
+  type: text
+  auto_fill: true
  name:
   type: text
   auto_fill: true
@@ -103,6 +109,7 @@ actions:
 - action_species
 - action_condition
 - action_name
+- action_skill
 
 forms: {}
 e2e_actions: []

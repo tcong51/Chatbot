@@ -1,6 +1,16 @@
 version: "2.0"
 nlu:
 #Khu vực
+
+- intent: ask_skill
+  examples: |
+    - Kỹ thuật trồng [cây Sala](skill) là gì?
+    - Kỹ thuật trồng cây [chanh leo](skill) là gì?
+    - Kỹ thuật trồng cây [lan hoàng dương](skill) là gì?
+    - Kỹ thuật trồng cây [bưởi năm roi](skill) là gì?
+    - Kỹ thuật trồng cây [chuối hột](skill) là gì?
+    - Kỹ thuật trồng [cây phát tài](skill) là gì?
+    - Kỹ thuật trồng cây [cam sành](skill) là gì?
 - intent: ask_name
   examples: |
     - [Cây Sala](name) là cây gì?
