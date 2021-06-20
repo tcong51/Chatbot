@@ -1,0 +1,18 @@
+version: "2.0"
+stories:
+- story: happy path 1 (.\tests\test_stories.yml)
+  steps:
+  - intent: ask_skill
+    entities:
+    - skill: cây Sala
+    - skill: cây Sala
+  - slot_was_set:
+    - skill: cây Sala
+  - action: action_skill
+  - intent: ask_name
+    entities:
+    - name: Cây Sala  # predicted: nametree: Cây Sala
+    - name: Cây Sala
+  - slot_was_set:
+    - name: Cây Sala
+  - action: action_name

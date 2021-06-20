@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +9,7 @@
   let e = document.createElement("script"),
     t = document.head || document.getElementsByTagName("head")[0];
   (e.src =
-    "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"),
+    "./js/index.js"),
     (e.async = !0),
     (e.onload = () => {
       window.WebChat.default(
@@ -24,5 +25,6 @@
     t.insertBefore(e, t.firstChild);
 })();
 </script>
+
 </body>
 </html>

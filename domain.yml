@@ -4,7 +4,6 @@ config:
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
-
 intents:
 - ask_condition:
     use_entities: true
@@ -28,13 +27,20 @@ intents:
     use_entities: true
 - ask_skill:
     use_entities: true
+- ask_name_type:
+    use_entities: true
 - greet:
     use_entities: true
 - bot_challenge:
     use_entities: true
 - goodbye:
     use_entities: true
-
+- give_name:
+    use_entities: true
+- space:
+    use_entities: false
+- give_rule:
+    use_entities: false
 entities:
 - area
 - benefit
@@ -48,6 +54,10 @@ entities:
 - conditionsecond
 - name
 - skill
+- nametree
+- typetree
+- cust_sex
+- cust_name
 slots:
  skill:
   type: text
@@ -85,19 +95,41 @@ slots:
  conditionsecond:
   type: text
   auto_fill: true
-
+ nametree:
+  type: text
+  auto_fill: true
+ typetree:
+  type: text
+  auto_fill: true
+ cust_sex:
+  auto_fill: true
+  type: text
+ cust_name:
+  auto_fill: true
+  type: text
 
 responses:
+
   utter_greet:
-  - text: Hey! Rất vui được gặp bạn?
+  - text: Hey! Rất vui được gặp bạn? A/c tên gì ạ?
+  utter_greet_with_name:
+  - text: Chào {cust_sex} {cust_name}. Có thể giúp gì cho bạn không?
+  - text: Website thông tin có thể giúp gì cho {cust_sex} {cust_name} ạ?
   utter_did_that_help:
   - text: Did that help you?
   utter_happy:
   - text: Great, carry on!
   utter_goodbye:
   - text: Bye
+  - text: "Kính chào tạm biệt và chúc quý khách một ngày tốt lành!"
   utter_iamabot:
   - text: I am a bot, powered by Rasa.
+  utter_role:
+  - text: Mình là chatbot hỗ trợ, mình có thể giúp bạn tra cứu các thông tin liên quan đến cây trồng! Bạn có thể đặt ra câu hỏi...
+  utter_default:
+  - text: Xin lỗi tôi không hiểu câu hỏi của bạn. Bạn có thể hỏi lại một lần nữa không?
+  - text: I'm sorry. Rất tiếc tôi chưa hiểu ý của bạn?
+  - text: Bạn có thể lặp lại lần nữa không?
 actions:
 - action_area
 - action_benefit
@@ -110,6 +142,8 @@ actions:
 - action_condition
 - action_name
 - action_skill
+- action_name_type
+
 
 forms: {}
 e2e_actions: []

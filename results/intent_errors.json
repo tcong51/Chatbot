@@ -1,0 +1,242 @@
+[
+  {
+    "text": "Cây trồng thuộc loại dây leo",
+    "intent": "ask_name",
+    "intent_prediction": {
+      "name": "ask_benefit",
+      "confidence": 0.3208915591239929
+    }
+  },
+  {
+    "text": "goodbye",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_name_type",
+      "confidence": 0.683188796043396
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại thân gỗ và ở nơi nắng nhiều",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Cây trồng ở nơi nắng nhiều và thuộc loại dây leo",
+    "intent": "ask_name_type",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Cây thuộc khu vực độ ẩm độ ẩm trung bình",
+    "intent": "ask_humidity",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 0.8717434406280518
+    }
+  },
+  {
+    "text": "Cây thuộc khu vực độ ẩm thấp",
+    "intent": "ask_humidity",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 0.6294946670532227
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược và ở nơi bóng râm",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại dây leo",
+    "intent": "ask_condition",
+    "intent_prediction": {
+      "name": "ask_name",
+      "confidence": 0.42565596103668213
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược và ở nơi bóng râm",
+    "intent": "ask_name_type",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Cây phát tài là loại cây trồng gì?",
+    "intent": "ask_name_type",
+    "intent_prediction": {
+      "name": "ask_name",
+      "confidence": 0.32656919956207275
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược",
+    "intent": "ask_name",
+    "intent_prediction": {
+      "name": "ask_species",
+      "confidence": 0.3749034106731415
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại dây leo",
+    "intent": "ask_benefit",
+    "intent_prediction": {
+      "name": "ask_species",
+      "confidence": 0.42249226570129395
+    }
+  },
+  {
+    "text": "Cây trồng ở nơi nắng nhiều và thuộc loại dây leo",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 1.0
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "intent": "ask_condition",
+    "intent_prediction": {
+      "name": "ask_species",
+      "confidence": 0.343597412109375
+    }
+  },
+  {
+    "text": "Các loại cây trồng trên đất mùn",
+    "intent": "ask_name_type",
+    "intent_prediction": {
+      "name": "ask_landtype",
+      "confidence": 0.31944844126701355
+    }
+  },
+  {
+    "text": "Cây bưởi năm roi là cây gì?",
+    "intent": "ask_name",
+    "intent_prediction": {
+      "name": "ask_name_type",
+      "confidence": 0.40906691551208496
+    }
+  },
+  {
+    "text": "Cây phát tài là cây gì?",
+    "intent": "ask_name",
+    "intent_prediction": {
+      "name": "ask_name_type",
+      "confidence": 0.29606133699417114
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "intent": "ask_benefit",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 0.6165696978569031
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 0.6165696978569031
+    }
+  },
+  {
+    "text": "Các loại cây trồng trên đất mùn",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_landtype",
+      "confidence": 0.48883339762687683
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược",
+    "intent": "ask_condition",
+    "intent_prediction": {
+      "name": "ask_species",
+      "confidence": 0.5930079817771912
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại thân gỗ và ở nơi nắng nhiều",
+    "intent": "ask_name_type",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 0.888357937335968
+    }
+  },
+  {
+    "text": "Cây chanh leo là cây gì?",
+    "intent": "ask_name",
+    "intent_prediction": {
+      "name": "ask_name_type",
+      "confidence": 0.3789595067501068
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "intent": "ask_name",
+    "intent_prediction": {
+      "name": "ask_species",
+      "confidence": 0.4041302800178528
+    }
+  },
+  {
+    "text": "Cây che mát là những cây nào?",
+    "intent": "ask_benefit",
+    "intent_prediction": {
+      "name": "ask_name",
+      "confidence": 0.3887191414833069
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược",
+    "intent": "ask_benefit",
+    "intent_prediction": {
+      "name": "ask_species",
+      "confidence": 0.3754357099533081
+    }
+  },
+  {
+    "text": "Các cây trồng cần độ ẩm cao",
+    "intent": "ask_growthtime",
+    "intent_prediction": {
+      "name": "ask_humidity",
+      "confidence": 0.3592506945133209
+    }
+  },
+  {
+    "text": "Cây trồng thuộc loại kiểng",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_condition",
+      "confidence": 0.6187822818756104
+    }
+  },
+  {
+    "text": "Các loại cây trồng trên đất mùn",
+    "intent": "ask_species",
+    "intent_prediction": {
+      "name": "ask_landtype",
+      "confidence": 0.49815526604652405
+    }
+  },
+  {
+    "text": "goodbye",
+    "intent": "ask_name_type",
+    "intent_prediction": {
+      "name": "ask_species",
+      "confidence": 0.33011606335639954
+    }
+  }
+]

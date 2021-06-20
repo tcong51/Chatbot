@@ -1,27 +1,26 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+language: "vi"
 
 pipeline:
+#---------------------------------------------------------------------------------------------------------------------
+- name: "VietnameseTokenizer"
+- name: "RegexFeaturizer"
+- name: "CRFEntityExtractor"
+- name: "EntitySynonymMapper"
+- name: "CountVectorsFeaturizer"
+- name: "CountVectorsFeaturizer"
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 2
+- name: "DIETClassifier"
+  epochs: 300
+#-----------------------------------------------------------------------------------------------------------------------
+#1. supervised_embeddings mặc định
+# pipeline:
 # # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
 # # If you'd like to customize it, uncomment and adjust the pipeline.
 # # See https://rasa.com/docs/rasa/tuning-your-model for more information.
-#   - name: WhitespaceTokenizer
-#   - name: RegexFeaturizer
-#   - name: LexicalSyntacticFeaturizer
-#   - name: CountVectorsFeaturizer
-#   - name: CountVectorsFeaturizer
-#     analyzer: char_wb
-#     min_ngram: 1
-#     max_ngram: 4
-#   - name: DIETClassifier
-#     epochs: 100
-#   - name: EntitySynonymMapper
-#   - name: ResponseSelector
-#     epochs: 100
-#   - name: FallbackClassifier
-#     threshold: 0.3
-#     ambiguity_threshold: 0.1
   # - name: WhitespaceTokenizer
   # - name: RegexFeaturizer
   # - name: LexicalSyntacticFeaturizer
@@ -32,29 +31,74 @@ pipeline:
   #   max_ngram: 4
   # - name: DIETClassifier
   #   epochs: 100
+  #   constrain_similarities: true
   # - name: EntitySynonymMapper
   # - name: ResponseSelector
   #   epochs: 100
+  #   constrain_similarities: true
   # - name: FallbackClassifier
   #   threshold: 0.3
   #   ambiguity_threshold: 0.1
 
-# Configuration for Rasa Core.
-# https://rasa.com/docs/rasa/core/policies/
+#--------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+#2.Phân biệt chữ hoa với thường. Sử dụng dự đoán confidence cho các entity của các intent.
+#--------------------------------------------------------------------------------------------------
+# Sử dụng khoảng trắng để tách chữ.
+# - name: "WhitespaceTokenizer"
+# - name: "CRFEntityExtractor"
+# - name: "EntitySynonymMapper"
+#   # Kiểm tra vecto kí tự
+# - name: "CountVectorsFeaturizer"
+# - name: "CountVectorsFeaturizer"
+#   analyzer: "char_wb"
+#   min_ngram: 1
+#   max_ngram: 4
+#   # Regex kiểm tra kí tự in hay thường
+# - name: "RegexFeaturizer"
+#   "case_sensitive": True
+#   "use_word_boundaries": True
+#--------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+#3. Spacy tách từ, so sánh các từ có trong có intent và so sánh các entity để trả về dự đoán rank và ranking dựa trên confidence
+#--------------------------------------------------------------------------------------------------
+
+  # - name: SpacyNLP
+  #   # language model to load
+  #   model: "en_core_web_md"
+  # - name: SpacyTokenizer
+  #   # "intent_tokenization_flag": False
+  #   # "intent_split_symbol": "_"
+  #   # "token_pattern": None
+  # - name: SpacyFeaturizer
+  #   # "pooling": "mean"
+  # - name: "RegexFeaturizer"
+  #   case_sensitive: True
+  #   use_word_boundaries: True
+  # - name: CountVectorsFeaturizer
+  #   analyzer: "char_wb"
+  #   min_ngram: 1
+  #   max_ngram: 2
+  # - name: DIETClassifier
+  #   constrain_similarities: True
+  #   model_confidence: linear_norm
+  #   epochs: 20
+
+#--------------------------------------------------------------------------------------------------
+#--------------------------------------------------------------------------------------------------
+# # No configuration for the NLU pipeline was provided. The following default pipeline was used to train your model.
+# # If you'd like to customize it, uncomment and adjust the pipeline.
+# # See https://rasa.com/docs/rasa/tuning-your-model for more information.
+
+
+  
 policies:
 # # No configuration for policies was provided. The following default policies were used to train your model.
 # # If you'd like to customize them, uncomment and adjust the policies.
 # # See https://rasa.com/docs/rasa/policies for more information.
 #   - name: MemoizationPolicy
+#   - name: RulePolicy
 #   - name: TEDPolicy
 #     max_history: 5
 #     epochs: 100
-#   - name: RulePolicy
-  # - name: MemoizationPolicy
-  # - name: TEDPolicy
-  #   max_history: 5
-  #   epochs: 100
-  # - name: RulePolicy
-
-
-  
+#     constrain_similarities: true

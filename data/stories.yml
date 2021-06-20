@@ -1,11 +1,17 @@
 version: "2.0"
 stories:
 #story
+
 - story: teststory1
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_did_that_help
+  - intent: give_name
+  - action: utter_greet_with_name
+  - intent: bot_challenge
+  - action: utter_iamabot
+  - intent: give_role
+  - action: utter_role
   - intent: ask_area
   - action: action_area
 - story: teststory2
@@ -48,6 +54,13 @@ stories:
   steps:
   - intent: ask_skill
   - action: action_skill
-
+- story: teststory12
+  steps:
+  - intent: ask_name_type
+  - action: action_name_type
+- story: teststory13
+  steps:
+  - intent: space
+  - action: utter_default
 
 

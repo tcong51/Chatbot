@@ -13,10 +13,117 @@ from rasa_sdk.executor import CollectingDispatcher
 # from rasa_sdk.forms import FormAction
 import mysql.connector
 import feedparser
+import re
 #-------------------------------------------------------------------------------------------------------------
 # #--------------------------------------------------------------------------------------------------------------
 #------------------------------------------------------------------------------------------------------------------
 # #-------------------------------------------------------------------------------------------------------------
+
+
+
+#---------------------------------------------------------------------
+class action_name_type(Action):
+
+    def name(self):
+        return "action_name_type"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        nameVariable = tracker.get_slot("nametree")
+        typeVariable = tracker.get_slot("typetree")
+        def supportType(type):
+            area = 'khu vực'
+            benefit = 'công dụng'
+            climate = 'khí hậu'
+            growthtime = 'thời gian phát triển'
+            species = 'loại cây trồng'
+            humidity = 'độ ẩm'
+            light = 'ánh sáng'
+            landtype = 'loại đất'
+            switcher={
+                        area:'Area',
+                        benefit:'Benefit',
+                        climate:'Climate',
+                        growthtime:'Growthtime',
+                        species:'Species',
+                        humidity:'Humidity',
+                        light:'Light',
+                        landtype:'Landtype'
+                    }
+            return switcher.get(type,"Không có dữ liệu")                                                  
+        def supportAnswer(type):
+            area = 'khu vực'
+            benefit = 'công dụng'
+            climate = 'khí hậu'
+            growthtime = 'thời gian phát triển'
+            species = 'loại cây trồng'
+            humidity = 'độ ẩm'
+            light = 'ánh sáng'
+            landtype = 'loại đất'
+            switcher={
+                        area:' trồng được ở ',
+                        benefit:' có ',
+                        climate:' trồng được ở ',
+                        growthtime:' có ',
+                        species:' thuộc ',
+                        humidity:' thích hợp với ',
+                        light:' phù hợp với môi trường có ',
+                        landtype:' trồng được ở '
+                    }
+            return switcher.get(type,"Không có dữ liệu")
+
+        support = supportType(typeVariable)
+        supAns = supportAnswer(typeVariable)
+        Return = []
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+                    passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        typeOf = "SELECT * FROM {}".format(support)
+        curTree.execute(typeOf)  
+        result = curTree.fetchall()
+        for x in result:
+            Return.append(x[0])
+        myconn.rollback()
+        myconn.close()
+        #-----------------------------------
+        myconn = mysql.connector.connect(host = "localhost", user = "root", 
+            passwd = "",database="data_trees")
+        curTree =myconn.cursor()
+        codeOfType = "SELECT {} FROM db_trees WHERE TreeName LIKE '{}'".format(support,nameVariable)
+        curTree.execute(codeOfType)  
+        result = curTree.fetchall()
+        variableAdd = tuple(result)
+        varAdd = variableAdd[0]
+        arrAdd = []
+        for i in varAdd:
+            if ( i != ','):
+                arrAdd.append(i)
+        arrBdd = []
+        for i in arrAdd[0]:
+            if (i != ','):
+                arrBdd.append(int(i))
+        arrReturn = []
+        for i in Return:
+            for j in arrBdd:
+                try:
+                    if(i==j):
+                        arrReturn.append(i)
+                        break
+                except:
+                    break
+        nameTypeArray  = []
+        for x in arrReturn:
+                typeOf = "SELECT * FROM {} WHERE Code = '{}'".format(support,x)
+                curTree.execute(typeOf)  
+                result = curTree.fetchall()
+                for x in result:
+                    nameTypeArray.append(x[1])   
+        dispatcher.utter_message(nameVariable + supAns + typeVariable +' là: ' )
+        for x in nameTypeArray:
+            dispatcher.utter_message('- ' + x)  
+        return []
+
 # #--------------------------------------------------------------------------------------------------------------
 # #--------------------------------------------------------------------------------------------------------------
 class action_area(Action):
@@ -644,7 +751,7 @@ class action_name(Action):
         if(lenArray >= 1):
             dispatcher.utter_message(nameArray[0])
             
-            dispatcher.utter_message("Để biết thêm thông tin vui lòng đọc thêm tại đây: http://localhost/Github/NienluanCS/detail_trees.php?id=" + str(codeF))
+            dispatcher.utter_message("Để biết thêm thông tin vui lòng đọc thêm tại đây: http://localhost/Github/NLNComputerScience/detail_trees.php?id=" + str(codeF))
         else:
             dispatcher.utter_message("Không có định nghĩa cho cây trồng này")
         return []
@@ -677,25 +784,11 @@ class action_skill(Action):
         lenArray =  len(nameSkillArray)
         if(lenArray >= 1):
             dispatcher.utter_message(nameSkillArray[0])
-            dispatcher.utter_message("Để biết thêm thông tin vui lòng đọc thêm tại đây: http://localhost/Github/NienluanCS/detail_trees.php?id=" + str(codeF))
+            dispatcher.utter_message("Để biết thêm thông tin vui lòng đọc thêm tại đây: http://localhost/Github/NLNComputerScience/detail_trees.php?id=" + str(codeF))
 
         else:
             dispatcher.utter_message("Xin lỗi cây này chưa có trong CSDL!")
         return []
 #--------------------------------------------------------------------------------------------------------------
-# class action_get_lottery(Action):
-#    def name(self):
-#           return 'action_get_lottery'
-#    def run(self, dispatcher, tracker:Tracker, domain)-> List[Text]:
-#             # Khai bao dia chi luu tru ket qua so xo. O day lam vi du nen minh lay ket qua SX Mien Bac
-#             url = 'https://xskt.com.vn/rss-feed/mien-bac-xsmb.rss'
-#             # Tien hanh lay thong tin tu URL
-#             feed_cnt = feedparser.parse(url)
-#             # Lay ket qua so xo moi nhat
-#             first_node = feed_cnt['entries']
-#             # Lay thong tin ve ngay va chi tiet cac giai
-#             return_msg = first_node[0]['title'] + "\n" + first_node[0]['description']
-#             # Tra ve cho nguoi dung
-#             dispatcher.utter_message(return_msg)
-#             return []
+
 # #--------------------------------------------------------------------------------------------------------------

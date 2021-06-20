@@ -1,0 +1,538 @@
+version: "2.0"
+nlu:
+- intent: bot_challenge
+  examples: |
+    - are you a human?
+- intent: goodbye
+  examples: |
+    - goodbye
+- intent: give_name
+  examples: |
+    - [Chú](cust_sex) tên [Văn Võ](cust_name)
+    - [Anh](cust_sex) tên [Thành Công](cust_name)
+- intent: greet
+  examples: |
+    - hi
+    - hey
+- intent: ask_area
+  examples: |
+    - Các cây trồng ở khu vực [Đồng bằng sông Cửu Long](area)
+    - Các cây trồng ở khu vực [Đồng bằng sông Hồng](area)
+    - [Đồng bằng sông Hồng](area) có cây trồng phổ biến nào?
+- intent: ask_climate
+  examples: |
+    - Các cây trồng ở khí hậu [mát mẻ](climate)
+    - [Khô nóng](climate)
+    - [Mát mẻ](climate)
+- intent: ask_light
+  examples: |
+    - Cây trồng ở điều kiện [nắng nhiều](light)
+    - Khu vực có [nắng nhiều](light) trồng được cây nào?
+    - Khu vực có [bóng râm](light) trồng được cây nào?
+- intent: ask_growthtime
+  examples: |
+    - Các cây trồng cần độ ẩm [cao](growthtime)
+    - Cây [dài ngày](growthtime)
+    - Các cây trồng [ngắn ngày](growthtime)
+    - Cây [ngắn ngày](growthtime)
+- intent: ask_humidity
+  examples: |
+    - Các cây trồng cần độ ẩm [trung bình](humidity)
+    - Các cây trồng cần độ ẩm [cao](humidity)
+    - Cây thuộc khu vực độ ẩm [cao](humidity)
+    - Cây thuộc khu vực độ ẩm [thấp](humidity)
+    - Cây thuộc khu vực độ ẩm độ ẩm [trung bình](humidity)
+- intent: ask_skill
+  examples: |
+    - Kỹ thuật trồng [cây phát tài](skill) là gì?
+    - Kỹ thuật trồng cây [chuối hột](skill) là gì?
+    - Kỹ thuật trồng [cây Sala](skill) là gì?
+    - Kỹ thuật trồng cây [lan hoàng dương](skill) là gì?
+    - Kỹ thuật trồng cây [chanh leo](skill) là gì?
+    - Kỹ thuật trồng cây [bưởi năm roi](skill) là gì?
+- intent: ask_landtype
+  examples: |
+    - Những cây trồng ở [đất phèn](landtype)
+    - Những cây trồng ở [đất phù sa](landtype)
+    - Các loại cây trồng trên [đất cát](landtype)
+    - Các loại cây trồng trên [đất phèn](landtype)
+    - Các loại cây trồng trên [đất mùn](landtype)
+    - Những cây trồng ở [đất mùn](landtype)
+    - Những cây trồng ở [đất cát](landtype)
+- intent: ask_benefit
+  examples: |
+    - Cây [cố định đất ven sông](benefit) là những cây nào?
+    - Cây trồng thuộc loại [thảo dược](species)
+    - Cây trồng thuộc loại [dây leo](species)
+    - Cây [che mát](benefit) là những cây nào?
+    - Các cây trồng dùng để [che mát](benefit)
+    - Các cây trồng dùng để [cải tạo đất](benefit)
+    - Cây [cải tạo đất](benefit) là những cây nào?
+    - Cây trồng thuộc loại [ăn quả](species)
+- intent: ask_name
+  examples: |
+    - Cây [cam sành](name) là cây gì?
+    - Cây [chanh leo](name) là cây gì?
+    - Cây trồng thuộc loại [dây leo](species)
+    - Cây trồng thuộc loại [ăn quả](species)
+    - Cây [bưởi năm roi](name) là cây gì?
+    - Cây trồng thuộc loại [thảo dược](species)
+    - Cây [lan hoàng dương](name) là cây gì?
+    - Cây [chuối hột](name) là cây gì?
+- intent: ask_species
+  examples: |
+    - Các loại cây trồng trên [đất mùn](typetree)
+    - Cây trồng thuộc loại [thảo dược](species)
+    - Cây trồng thuộc loại [thân gỗ](species)
+    - Cây trồng thuộc loại [dây leo](species)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Các loại cây trồng trên [đất mùn](species)
+    - Cây trồng thuộc loại [ăn quả](species)
+    - Cây trồng thuộc loại [kiểng](species)
+- intent: ask_name_type
+  examples: |
+    - [Bưởi năm roi](nametree) thích hợp trồng ở [loại đất](typetree) nào?
+    - [Khế](nametree) thích hợp trồng ở [loại đất](typetree) nào?
+    - [Chuối hột](nametree) thích hợp ở [khí hậu](typetree) nào?
+    - [Lan Hoàng Dương](nametree) thuộc [loại cây trồng](typetree) nào?
+    - [Cây phát tài](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Lan Hoàng Dương](nametree) trồng được ở [khu vực](typetree) nào?
+    - [Lan Hoàng Dương](nametree) thích hợp trồng ở [loại đất](typetree) nào?
+    - [Cam sành](nametree) có [thời gian phát triển](typetree) như thế nào?
+    - [Cây phát tài](nametree) trồng được ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Cam sành](nametree) thích hợp ở [khí hậu](typetree) nào?
+    - [Bưởi năm roi](nametree) trồng được ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Cây phát tài](nametree) có [công dụng](typetree) gì?
+    - [Chanh leo](nametree) có [công dụng](typetree) gì?
+    - [Bưởi năm roi](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Cam sành](nametree) trồng được ở [loại đất](typetree) nào?
+    - [Chanh leo](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Lan Hoàng Dương](nametree) trồng được ở [khí hậu](typetree) nào?
+    - [Khế](nametree) trồng được ở [loại đất](typetree) nào?
+    - [Cam sành](nametree) thích hợp trồng ở [loại đất](typetree) nào?
+    - [Khế](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Cam sành](nametree) trồng được ở [khí hậu](typetree) nào?
+    - [Cây phát tài](nametree) trồng được ở [khu vực](typetree) nào?
+    - [Khế](nametree) trồng được ở [khí hậu](typetree) nào?
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - [Bưởi năm roi](nametree) có [công dụng](typetree) gì?
+    - [Chanh leo](nametree) thuộc [loại cây trồng](typetree) nào?
+    - [Cam sành](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Chuối hột](nametree) thích hợp trồng ở [loại đất](typetree) nào?
+    - [Cây Sala](nametree) thuộc [loại cây trồng](typetree) nào?
+    - [Lan Hoàng Dương](nametree) trồng được ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Bưởi năm roi](nametree) trồng được ở [khu vực](typetree) nào?
+    - [Chuối hột](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Lan Hoàng Dương](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Bưởi năm roi](nametree) có [thời gian phát triển](typetree) như thế nào?
+    - [Khế](nametree) thích hợp ở [khí hậu](typetree) nào?
+    - [Cây phát tài](nametree) trồng được ở [khí hậu](typetree) nào?
+    - [Lan Hoàng Dương](nametree) là [loại cây trồng](typetree) gì?
+    - [Cam sành](nametree) có [công dụng](typetree) gì?
+    - [Bưởi năm roi](nametree) là [loại cây trồng](typetree) gì?
+    - [Cây Sala](nametree) có [thời gian phát triển](typetree) như thế nào?
+    - [Bưởi năm roi](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Cây phát tài](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Cam sành](nametree) thuộc [loại cây trồng](typetree) nào?
+    - [Cây Sala](nametree) trồng được ở [loại đất](typetree) nào?
+    - [Cây phát tài](nametree) trồng được ở [loại đất](typetree) nào?
+    - [Chanh leo](nametree) trồng được ở [loại đất](typetree) nào?
+    - [Chuối hột](nametree) thuộc [loại cây trồng](typetree) nào?
+    - [Chanh leo](nametree) trồng được ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Cây Sala](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Lan Hoàng Dương](nametree) có [thời gian phát triển](typetree) như thế nào?
+    - [Lan Hoàng Dương](nametree) thích hợp ở [khí hậu](typetree) nào?
+    - [Chanh leo](nametree) thích hợp ở [khí hậu](typetree) nào?
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - [Chanh leo](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Khế](nametree) là [loại cây trồng](typetree) gì?
+    - [Cây phát tài](nametree) có [thời gian phát triển](typetree) như thế nào?
+    - [Chuối hột](nametree) có [công dụng](typetree) gì?
+    - [Cam sành](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Chuối hột](nametree) trồng được ở [khí hậu](typetree) nào?
+    - [Lan Hoàng Dương](nametree) trồng được ở [loại đất](typetree) nào?
+    - [Cây Sala](nametree) thích hợp ở [khí hậu](typetree) nào?
+    - [Cây phát tài](nametree) là [loại cây trồng](typetree) gì?
+    - [Cây Sala](nametree) là [loại cây trồng](typetree) gì?
+    - [Chuối hột](nametree) trồng được ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Chuối hột](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Khế](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Lan Hoàng Dương](nametree) thích hợp ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Khế](nametree) có [thời gian phát triển](typetree) như thế nào?
+    - [Bưởi năm roi](nametree) thích hợp ở [khí hậu](typetree) nào?
+    - [Chanh leo](nametree) có [thời gian phát triển](typetree) như thế nào?
+    - [Cây Sala](nametree) thích hợp [độ ẩm](typetree) như thế nào?
+    - [Cây Sala](nametree) trồng được ở môi trường [ánh sáng](typetree) như thế nào?
+    - [Chanh leo](nametree) thích hợp trồng ở [loại đất](typetree) nào?
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - [Chanh leo](nametree) trồng được ở [khí hậu](typetree) nào?
+    - [Chuối hột](nametree) trồng được ở [khu vực](typetree) nào?
+    - [Khế](nametree) thuộc [loại cây trồng](typetree) nào?
+    - goodbye
+    - [Cây Sala](nametree) trồng được ở [khu vực](typetree) nào?
+    - [Lan Hoàng Dương](nametree) có [công dụng](typetree) gì?
+    - [Chuối hột](nametree) là [loại cây trồng](typetree) gì?
+- intent: ask_condition
+  examples: |
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng ở khí hậu [mát mẻ](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng sống nơi có độ ẩm [thấp](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và độ ẩm [thấp](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng ở khí hậu [khô nóng](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng ở khí hậu [mát mẻ](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và ở có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng sống nơi có độ ẩm [trung bình](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng ở khí hậu [mát mẻ](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và có độ ẩm  [cao](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và độ ẩm [cao](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và độ ẩm [cao](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng ở khí hậu [mát mẻ](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và độ ẩm [cao](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng ở khí hậu [mát mẻ](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [trung bình](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và độ ẩm [thấp](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và độ ẩm [thấp](conditionsecond)
+    - Cây trồng ở khí hậu [khô nóng](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](species)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng sống nơi có độ ẩm [thấp](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [cao](conditionfirst) và thuộc loại [đất phèn](conditionsecond)
+    - Cây trồng ở nơi [bóng râm](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng sống nơi có độ ẩm [cao](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có công dụng [cố định đất ven sông](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và có độ ẩm [cao](conditionsecond)
+    - Cây trồng ở nơi có khí hậu [khô nóng](conditionfirst) và có độ ẩm [thấp](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và [ngắn ngày](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng [dài ngày](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và [dài ngày](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và thuộc loại [thân gỗ](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và thuộc loại [đất cát](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSH](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](species)
+    - Cây trồng ở nơi có khí hậu [mát mẻ](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và thuộc loại [ăn quả](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [thảo dược](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng thuộc loại [đất phèn](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng ở nơi [nắng nhiều](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng thuộc loại [đất mùn](conditionfirst) và thuộc loại [thảo dược](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng [ngắn ngày](conditionfirst) và có khí hậu [khô nóng](conditionsecond)
+    - Cây trồng ở khu vực [ĐBSCL](conditionfirst) và ở nơi [bóng râm](conditionsecond)
+    - Cây trồng có công dụng [cải tạo đất](conditionfirst) và ở nơi [nắng nhiều](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và thuộc loại [dây leo](conditionsecond)
+    - Cây trồng thuộc loại [ăn quả](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng ở khí hậu [mát mẻ](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và ở khu vực [ĐBSH](conditionsecond)
+    - Cây trồng ở nơi có độ ẩm [thấp](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng thuộc loại [đất phù sa](conditionfirst) và thuộc loại [kiểng](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và có độ ẩm [trung bình](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có công dụng [che mát](conditionsecond)
+    - Cây trồng thuộc loại [kiểng](conditionfirst) và có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng thuộc loại [đất cát](conditionfirst) và có công dụng [cải tạo đất](conditionsecond)
+    - Cây trồng có công dụng [che mát](conditionfirst) và ở có khí hậu [mát mẻ](conditionsecond)
+    - Cây trồng có công dụng [cố định đất ven sông](conditionfirst) và thuộc loại [đất mùn](conditionsecond)
+    - Cây trồng sống nơi có độ ẩm [trung bình](conditionfirst) và [ĐBSCL](conditionsecond)
+    - Cây trồng thuộc loại [dây leo](conditionfirst) và ở khu vực [ĐBSCL](conditionsecond)
+    - Cây trồng thuộc loại [thân gỗ](conditionfirst) và thuộc loại [đất phù sa](conditionsecond)

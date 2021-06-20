@@ -1,0 +1,2848 @@
+[
+  {
+    "text": "Kỹ thuật trồng cây phát tài là gì?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 27,
+        "value": "cây phát tài",
+        "entity": "skill"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nametree",
+        "start": 15,
+        "end": 27,
+        "confidence_entity": 0.5,
+        "value": "cây phát tài",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Kỹ thuật trồng cây cam sành là gì?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 27,
+        "value": "cam sành",
+        "entity": "skill"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 19,
+        "end": 27,
+        "confidence_entity": 0.512635384003577,
+        "value": "cam sành",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "name",
+        "start": 19,
+        "end": 27,
+        "confidence_entity": 0.9233340620994568,
+        "value": "cam sành",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây phát tài là cây gì?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 12,
+        "value": "Cây phát tài",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nametree",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.89552528454326,
+        "value": "Cây phát tài",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 12,
+        "confidence_entity": 0.5303371548652649,
+        "value": "Cây phát tài",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "ăn quả",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.8794719220847661,
+        "value": "ăn quả",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.9876986742019653,
+        "value": "ăn quả",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng dùng để cải tạo đất",
+    "entities": [
+      {
+        "start": 22,
+        "end": 33,
+        "value": "cải tạo đất",
+        "entity": "benefit"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 22,
+        "end": 33,
+        "confidence_entity": 0.8121512761288183,
+        "value": "cải tạo đất",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 22,
+        "end": 33,
+        "confidence_entity": 0.1943676620721817,
+        "value": "cải tạo đất",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây cải tạo đất là những cây nào?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 15,
+        "value": "cải tạo đất",
+        "entity": "benefit"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 4,
+        "end": 15,
+        "confidence_entity": 0.3182881496596641,
+        "value": "cải tạo đất",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "benefit",
+        "start": 4,
+        "end": 15,
+        "confidence_entity": 0.2939562499523163,
+        "value": "cải tạo đất",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng cần độ ẩm cao",
+    "entities": [
+      {
+        "start": 24,
+        "end": 27,
+        "value": "cao",
+        "entity": "growthtime"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.9430850258743381,
+        "value": "cao",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "humidity",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.9278068542480469,
+        "value": "cao",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng cần độ ẩm cao",
+    "entities": [
+      {
+        "start": 24,
+        "end": 27,
+        "value": "cao",
+        "entity": "humidity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.9430850258743381,
+        "value": "cao",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "humidity",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.9278068542480469,
+        "value": "cao",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các loại cây trồng trên đất cát",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "đất cát",
+        "entity": "landtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.4736349117056442,
+        "value": "đất cát",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "typetree",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.3786947727203369,
+        "value": "đất",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "landtype",
+        "start": 28,
+        "end": 31,
+        "confidence_entity": 0.4891285300254822,
+        "value": "cát",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại dây leo",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "dây leo",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.8517639919837098,
+        "value": "dây leo",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9805436730384827,
+        "value": "dây leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "ăn quả",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.8794719220847661,
+        "value": "ăn quả",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.9876986742019653,
+        "value": "ăn quả",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng có công dụng che mát và độ ẩm thấp",
+    "entities": [
+      {
+        "start": 23,
+        "end": 30,
+        "value": "che mát",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 40,
+        "end": 44,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.9836119516585614,
+        "value": "che mát",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 23,
+        "end": 30,
+        "confidence_entity": 0.9994300007820129,
+        "value": "che mát",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có khí hậu mát mẻ và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 27,
+        "end": 33,
+        "value": "mát mẻ",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 46,
+        "end": 50,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.994936321443305,
+        "value": "mát mẻ",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 27,
+        "end": 33,
+        "confidence_entity": 0.9992817044258118,
+        "value": "mát mẻ",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ngắn ngày và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 10,
+        "end": 19,
+        "value": "ngắn ngày",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 32,
+        "end": 36,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 10,
+        "end": 19,
+        "confidence_entity": 0.9827184812367207,
+        "value": "ngắn ngày",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 10,
+        "end": 19,
+        "confidence_entity": 0.998879611492157,
+        "value": "ngắn ngày",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi bóng râm và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 16,
+        "end": 24,
+        "value": "bóng râm",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 37,
+        "end": 41,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 16,
+        "end": 24,
+        "confidence_entity": 0.9903277469772003,
+        "value": "bóng râm",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 16,
+        "end": 24,
+        "confidence_entity": 0.9996333122253418,
+        "value": "bóng râm",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các loại cây trồng trên đất mùn",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "đất mùn",
+        "entity": "typetree"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "landtype",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.2880329323186957,
+        "value": "đất mùn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "typetree",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.4237283170223236,
+        "value": "đất mùn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Kỹ thuật trồng cây Sala là gì?",
+    "entities": [
+      {
+        "start": 15,
+        "end": 23,
+        "value": "cây Sala",
+        "entity": "skill"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "skill",
+        "start": 15,
+        "end": 23,
+        "confidence_entity": 0.5957807898521423,
+        "value": "cây Sala",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Kỹ thuật trồng cây chuối hột là gì?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 28,
+        "value": "chuối hột",
+        "entity": "skill"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 19,
+        "end": 28,
+        "confidence_entity": 0.50428353905611,
+        "value": "chuối hột",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "name",
+        "start": 19,
+        "end": 28,
+        "confidence_entity": 0.9112902283668518,
+        "value": "chuối hột",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây Sala là cây gì?",
+    "entities": [
+      {
+        "start": 0,
+        "end": 8,
+        "value": "Cây Sala",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nametree",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.9177219435424268,
+        "value": "Cây Sala",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 8,
+        "confidence_entity": 0.647029459476471,
+        "value": "Cây Sala",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây bưởi năm roi là cây gì?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 16,
+        "value": "bưởi năm roi",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "skill",
+        "start": 4,
+        "end": 16,
+        "confidence_entity": 0.4540900676513005,
+        "value": "bưởi năm roi",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "name",
+        "start": 0,
+        "end": 3,
+        "confidence_entity": 0.5924884676933289,
+        "value": "Cây",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "skill",
+        "start": 4,
+        "end": 16,
+        "confidence_entity": 0.45,
+        "value": "bưởi năm roi",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại dây leo",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "dây leo",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.7709896867096154,
+        "value": "dây leo",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9842635989189148,
+        "value": "dây leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng cần độ ẩm trung bình",
+    "entities": [
+      {
+        "start": 24,
+        "end": 34,
+        "value": "trung bình",
+        "entity": "humidity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 24,
+        "end": 34,
+        "confidence_entity": 0.9844452315519687,
+        "value": "trung bình",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "landtype",
+        "start": 24,
+        "end": 34,
+        "confidence_entity": 0.5462381839752197,
+        "value": "trung bình",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây thuộc khu vực độ ẩm độ ẩm trung bình",
+    "entities": [
+      {
+        "start": 30,
+        "end": 40,
+        "value": "trung bình",
+        "entity": "humidity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 30,
+        "end": 40,
+        "confidence_entity": 0.9546390941473819,
+        "value": "trung bình",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 30,
+        "end": 40,
+        "confidence_entity": 0.9970273375511169,
+        "value": "trung bình",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các loại cây trồng trên đất mùn",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "đất mùn",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "typetree",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.5834903641587518,
+        "value": "đất mùn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "typetree",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.5124576687812805,
+        "value": "đất mùn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng sống nơi có độ ẩm thấp và ở khu vực ĐBSCL",
+    "entities": [
+      {
+        "start": 28,
+        "end": 32,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 46,
+        "end": 51,
+        "value": "ĐBSCL",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 51,
+        "confidence_entity": 0.9919958715977825,
+        "value": "ĐBSCL",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 51,
+        "confidence_entity": 0.9998655319213867,
+        "value": "ĐBSCL",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và có khí hậu mát mẻ",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 50,
+        "value": "mát mẻ",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 50,
+        "confidence_entity": 0.9866308678655055,
+        "value": "mát mẻ",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 50,
+        "confidence_entity": 0.9996664524078369,
+        "value": "mát mẻ",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại đất cát",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 51,
+        "value": "đất cát",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9729604585126971,
+        "value": "đất cát",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9996117949485779,
+        "value": "đất cát",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại đất mùn và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "đất mùn",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9913983777870012,
+        "value": "đất mùn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9985413551330566,
+        "value": "đất mùn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi nắng nhiều và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 16,
+        "end": 26,
+        "value": "nắng nhiều",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 39,
+        "end": 43,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 16,
+        "end": 26,
+        "confidence_entity": 0.9856360425577698,
+        "value": "nắng nhiều",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 16,
+        "end": 26,
+        "confidence_entity": 0.9996979236602783,
+        "value": "nắng nhiều",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại thảo dược",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 53,
+        "value": "thảo dược",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 53,
+        "confidence_entity": 0.7848982901231931,
+        "value": "thảo dược",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 53,
+        "confidence_entity": 0.9995747208595276,
+        "value": "thảo dược",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "thảo dược",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 43,
+        "end": 47,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9771261983902039,
+        "value": "thảo dược",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9972694516181946,
+        "value": "thảo dược",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Kỹ thuật trồng cây bưởi năm roi là gì?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 31,
+        "value": "bưởi năm roi",
+        "entity": "skill"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 19,
+        "end": 31,
+        "confidence_entity": 0.47991310688097377,
+        "value": "bưởi năm roi",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "skill",
+        "start": 19,
+        "end": 31,
+        "confidence_entity": 0.75,
+        "value": "bưởi năm roi",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây cam sành là cây gì?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 12,
+        "value": "cam sành",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "skill",
+        "start": 4,
+        "end": 12,
+        "confidence_entity": 0.5131754541400839,
+        "value": "cam sành",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "skill",
+        "start": 4,
+        "end": 12,
+        "confidence_entity": 0.5328143239021301,
+        "value": "cam sành",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "thảo dược",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9194367844241795,
+        "value": "thảo dược",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9664582014083862,
+        "value": "thảo dược",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng dùng để che mát",
+    "entities": [
+      {
+        "start": 22,
+        "end": 29,
+        "value": "che mát",
+        "entity": "benefit"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.5332093141673522,
+        "value": "che mát",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "benefit",
+        "start": 22,
+        "end": 29,
+        "confidence_entity": 0.8188156485557556,
+        "value": "che mát",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "thảo dược",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9194367844241795,
+        "value": "thảo dược",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9664582014083862,
+        "value": "thảo dược",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây thuộc khu vực độ ẩm thấp",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "thấp",
+        "entity": "humidity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "typetree",
+        "start": 10,
+        "end": 17,
+        "confidence_entity": 0.9772271513938904,
+        "value": "khu vực",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Những cây trồng ở đất mùn",
+    "entities": [
+      {
+        "start": 18,
+        "end": 25,
+        "value": "đất mùn",
+        "entity": "landtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.8957454317844574,
+        "value": "đất mùn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "typetree",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.312334805727005,
+        "value": "đất mùn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Những cây trồng ở đất phù sa",
+    "entities": [
+      {
+        "start": 18,
+        "end": 28,
+        "value": "đất phù sa",
+        "entity": "landtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 18,
+        "end": 28,
+        "confidence_entity": 0.48548728603296093,
+        "value": "đất phù sa",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "landtype",
+        "start": 18,
+        "end": 28,
+        "confidence_entity": 0.9215628504753113,
+        "value": "đất phù sa",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại kiểng",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "kiểng",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.9898275381329061,
+        "value": "kiểng",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.5037116408348083,
+        "value": "kiểng",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "thảo dược",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9194367844241795,
+        "value": "thảo dược",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9664582014083862,
+        "value": "thảo dược",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở khu vực ĐBSH và độ ẩm thấp",
+    "entities": [
+      {
+        "start": 20,
+        "end": 24,
+        "value": "ĐBSH",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 34,
+        "end": 38,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 20,
+        "end": 24,
+        "confidence_entity": 0.9941313820940495,
+        "value": "ĐBSH",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 20,
+        "end": 24,
+        "confidence_entity": 0.999794065952301,
+        "value": "ĐBSH",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và có công dụng cố định đất ven sông",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 46,
+        "end": 66,
+        "value": "cố định đất ven sông",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 66,
+        "confidence_entity": 0.8883769497758389,
+        "value": "cố định đất ven sông",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 66,
+        "confidence_entity": 0.9936235547065735,
+        "value": "cố định đất ven sông",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có khí hậu khô nóng và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 27,
+        "end": 35,
+        "value": "khô nóng",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 48,
+        "end": 52,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 27,
+        "end": 35,
+        "confidence_entity": 0.9871403383051608,
+        "value": "khô nóng",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 27,
+        "end": 35,
+        "confidence_entity": 0.9992413520812988,
+        "value": "khô nóng",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và ở nơi nắng nhiều",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 39,
+        "end": 49,
+        "value": "nắng nhiều",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 39,
+        "end": 49,
+        "confidence_entity": 0.9863311208508911,
+        "value": "nắng nhiều",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 39,
+        "end": 49,
+        "confidence_entity": 0.999778687953949,
+        "value": "nắng nhiều",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại thân gỗ",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 51,
+        "value": "thân gỗ",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9288936383944847,
+        "value": "thân gỗ",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9998133778572083,
+        "value": "thân gỗ",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại kiểng",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 49,
+        "value": "kiểng",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 49,
+        "confidence_entity": 0.9898268193504097,
+        "value": "kiểng",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 49,
+        "confidence_entity": 0.9998063445091248,
+        "value": "kiểng",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "ăn quả",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 40,
+        "end": 44,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.9769295245653548,
+        "value": "ăn quả",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.997154951095581,
+        "value": "ăn quả",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Kỹ thuật trồng cây chanh leo là gì?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 28,
+        "value": "chanh leo",
+        "entity": "skill"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 19,
+        "end": 24,
+        "confidence_entity": 0.2755941472214053,
+        "value": "chanh",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "skill",
+        "start": 19,
+        "end": 28,
+        "confidence_entity": 0.6777043342590332,
+        "value": "chanh leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây chanh leo là cây gì?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 13,
+        "value": "chanh leo",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "name",
+        "start": 4,
+        "end": 9,
+        "confidence_entity": 0.2613001362992245,
+        "value": "chanh",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "name",
+        "start": 4,
+        "end": 13,
+        "confidence_entity": 0.8117399215698242,
+        "value": "chanh leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây chuối hột là cây gì?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 13,
+        "value": "chuối hột",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "skill",
+        "start": 4,
+        "end": 13,
+        "confidence_entity": 0.5184308599382422,
+        "value": "chuối hột",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "skill",
+        "start": 4,
+        "end": 13,
+        "confidence_entity": 0.5043677091598511,
+        "value": "chuối hột",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng dùng để cố định đất ven sông",
+    "entities": [
+      {
+        "start": 22,
+        "end": 42,
+        "value": "cố định đất ven sông",
+        "entity": "benefit"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 22,
+        "end": 42,
+        "confidence_entity": 0.6984816584059316,
+        "value": "cố định đất ven sông",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 22,
+        "end": 42,
+        "confidence_entity": 0.63,
+        "value": "cố định đất ven sông",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng dài ngày",
+    "entities": [
+      {
+        "start": 14,
+        "end": 22,
+        "value": "dài ngày",
+        "entity": "growthtime"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 14,
+        "end": 22,
+        "confidence_entity": 0.6099721279796745,
+        "value": "dài ngày",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "growthtime",
+        "start": 14,
+        "end": 22,
+        "confidence_entity": 0.8700819611549377,
+        "value": "dài ngày",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây thuộc khu vực độ ẩm cao",
+    "entities": [
+      {
+        "start": 24,
+        "end": 27,
+        "value": "cao",
+        "entity": "humidity"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.8842670706308137,
+        "value": "cao",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "humidity",
+        "start": 24,
+        "end": 27,
+        "confidence_entity": 0.7455140352249146,
+        "value": "cao",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các loại cây trồng trên đất mùn",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "đất mùn",
+        "entity": "landtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "species",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.409249639224781,
+        "value": "đất mùn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "typetree",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.49,
+        "value": "đất mùn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các loại cây trồng trên đất phèn",
+    "entities": [
+      {
+        "start": 24,
+        "end": 32,
+        "value": "đất phèn",
+        "entity": "landtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 24,
+        "end": 32,
+        "confidence_entity": 0.4850419596829743,
+        "value": "đất phèn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "landtype",
+        "start": 24,
+        "end": 32,
+        "confidence_entity": 0.9537152051925659,
+        "value": "đất phèn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại thân gỗ",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "thân gỗ",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.989096686234845,
+        "value": "thân gỗ",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.57,
+        "value": "thân gỗ",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các loại cây trồng trên đất mùn",
+    "entities": [
+      {
+        "start": 24,
+        "end": 31,
+        "value": "đất mùn",
+        "entity": "typetree"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "species",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.409249639224781,
+        "value": "đất mùn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "typetree",
+        "start": 24,
+        "end": 31,
+        "confidence_entity": 0.49,
+        "value": "đất mùn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại dây leo",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "dây leo",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.8451733818984136,
+        "value": "dây leo",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9765159487724304,
+        "value": "dây leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng sống nơi có độ ẩm thấp và ở khu vực ĐBSH",
+    "entities": [
+      {
+        "start": 28,
+        "end": 32,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 46,
+        "end": 50,
+        "value": "ĐBSH",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 50,
+        "confidence_entity": 0.9903001118591443,
+        "value": "ĐBSH",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 50,
+        "confidence_entity": 0.9999079704284668,
+        "value": "ĐBSH",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng có công dụng cải tạo đất và độ ẩm thấp",
+    "entities": [
+      {
+        "start": 23,
+        "end": 34,
+        "value": "cải tạo đất",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 48,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 23,
+        "end": 34,
+        "confidence_entity": 0.9833023864529818,
+        "value": "cải tạo đất",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 23,
+        "end": 34,
+        "confidence_entity": 0.9957724213600159,
+        "value": "cải tạo đất",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng có công dụng cố định đất ven sông và độ ẩm thấp",
+    "entities": [
+      {
+        "start": 23,
+        "end": 43,
+        "value": "cố định đất ven sông",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 53,
+        "end": 57,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 23,
+        "end": 43,
+        "confidence_entity": 0.8996783480243883,
+        "value": "cố định đất ven sông",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 23,
+        "end": 43,
+        "confidence_entity": 0.9890943169593811,
+        "value": "cố định đất ven sông",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và có công dụng cải tạo đất",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 46,
+        "end": 57,
+        "value": "cải tạo đất",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 57,
+        "confidence_entity": 0.9626604800634879,
+        "value": "cải tạo đất",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 57,
+        "confidence_entity": 0.9992027878761292,
+        "value": "cải tạo đất",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và có công dụng che mát",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 46,
+        "end": 53,
+        "value": "che mát",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 53,
+        "confidence_entity": 0.971942817541402,
+        "value": "che mát",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 46,
+        "end": 53,
+        "confidence_entity": 0.9996612071990967,
+        "value": "che mát",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và có khí hậu khô nóng",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 52,
+        "value": "khô nóng",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 52,
+        "confidence_entity": 0.9867386783219815,
+        "value": "khô nóng",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 52,
+        "confidence_entity": 0.9989963173866272,
+        "value": "khô nóng",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và ngắn ngày",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 33,
+        "end": 42,
+        "value": "ngắn ngày",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 33,
+        "end": 42,
+        "confidence_entity": 0.9632612789265331,
+        "value": "ngắn ngày",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 33,
+        "end": 42,
+        "confidence_entity": 0.9997602105140686,
+        "value": "ngắn ngày",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại đất phù sa",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 54,
+        "value": "đất phù sa",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 54,
+        "confidence_entity": 0.9533815353655223,
+        "value": "đất phù sa",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 54,
+        "confidence_entity": 0.9995487332344055,
+        "value": "đất phù sa",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại dây leo",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 51,
+        "value": "dây leo",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.8451688732327621,
+        "value": "dây leo",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9995842576026917,
+        "value": "dây leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại ăn quả",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 50,
+        "value": "ăn quả",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 50,
+        "confidence_entity": 0.7658150722510134,
+        "value": "ăn quả",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 50,
+        "confidence_entity": 0.999693751335144,
+        "value": "ăn quả",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại dây leo và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "dây leo",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.990740873038961,
+        "value": "dây leo",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9757153987884521,
+        "value": "dây leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại kiểng và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 26,
+        "value": "kiểng",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 39,
+        "end": 43,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.9918346836442005,
+        "value": "kiểng",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 26,
+        "confidence_entity": 0.9953497052192688,
+        "value": "kiểng",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Kỹ thuật trồng cây lan hoàng dương là gì?",
+    "entities": [
+      {
+        "start": 19,
+        "end": 34,
+        "value": "lan hoàng dương",
+        "entity": "skill"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "skill",
+        "start": 19,
+        "end": 34,
+        "confidence_entity": 0.6785725951194763,
+        "value": "lan hoàng dương",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây lan hoàng dương là cây gì?",
+    "entities": [
+      {
+        "start": 4,
+        "end": 19,
+        "value": "lan hoàng dương",
+        "entity": "name"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "nametree",
+        "start": 4,
+        "end": 7,
+        "confidence_entity": 0.265829141434322,
+        "value": "lan",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "name",
+        "start": 4,
+        "end": 19,
+        "confidence_entity": 0.4551972448825836,
+        "value": "lan hoàng dương",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại dây leo",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "dây leo",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.8699464951503895,
+        "value": "dây leo",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9726725220680237,
+        "value": "dây leo",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "ăn quả",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.8734239068625615,
+        "value": "ăn quả",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.9878988862037659,
+        "value": "ăn quả",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng ngắn ngày",
+    "entities": [
+      {
+        "start": 14,
+        "end": 23,
+        "value": "ngắn ngày",
+        "entity": "growthtime"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 14,
+        "end": 23,
+        "confidence_entity": 0.582419103106539,
+        "value": "ngắn ngày",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "growthtime",
+        "start": 14,
+        "end": 23,
+        "confidence_entity": 0.9707978367805481,
+        "value": "ngắn ngày",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Các cây trồng cần độ ẩm thấp",
+    "entities": [
+      {
+        "start": 24,
+        "end": 28,
+        "value": "thấp",
+        "entity": "humidity"
+      }
+    ],
+    "predicted_entities": []
+  },
+  {
+    "text": "Những cây trồng ở đất cát",
+    "entities": [
+      {
+        "start": 18,
+        "end": 25,
+        "value": "đất cát",
+        "entity": "landtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.90072998351307,
+        "value": "đất cát",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "humidity",
+        "start": 18,
+        "end": 25,
+        "confidence_entity": 0.31348347663879395,
+        "value": "đất cát",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Những cây trồng ở đất phèn",
+    "entities": [
+      {
+        "start": 18,
+        "end": 26,
+        "value": "đất phèn",
+        "entity": "landtype"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 18,
+        "end": 26,
+        "confidence_entity": 0.4531836048147427,
+        "value": "đất phèn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "landtype",
+        "start": 18,
+        "end": 26,
+        "confidence_entity": 0.9035898447036743,
+        "value": "đất phèn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại thảo dược",
+    "entities": [
+      {
+        "start": 21,
+        "end": 30,
+        "value": "thảo dược",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.8276939763023402,
+        "value": "thảo dược",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 30,
+        "confidence_entity": 0.9852011799812317,
+        "value": "thảo dược",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại ăn quả",
+    "entities": [
+      {
+        "start": 21,
+        "end": 27,
+        "value": "ăn quả",
+        "entity": "species"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.8734239068625615,
+        "value": "ăn quả",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "species",
+        "start": 21,
+        "end": 27,
+        "confidence_entity": 0.9878988862037659,
+        "value": "ăn quả",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở khu vực ĐBSCL và độ ẩm thấp",
+    "entities": [
+      {
+        "start": 20,
+        "end": 25,
+        "value": "ĐBSCL",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 35,
+        "end": 39,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9936933713172372,
+        "value": "ĐBSCL",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 20,
+        "end": 25,
+        "confidence_entity": 0.9998397827148438,
+        "value": "ĐBSCL",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng dài ngày và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 10,
+        "end": 18,
+        "value": "dài ngày",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 31,
+        "end": 35,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 10,
+        "end": 18,
+        "confidence_entity": 0.982414523056939,
+        "value": "dài ngày",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 10,
+        "end": 18,
+        "confidence_entity": 0.9983078241348267,
+        "value": "dài ngày",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và dài ngày",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 33,
+        "end": 41,
+        "value": "dài ngày",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 33,
+        "end": 41,
+        "confidence_entity": 0.9637598845539969,
+        "value": "dài ngày",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 33,
+        "end": 41,
+        "confidence_entity": 0.9996131062507629,
+        "value": "dài ngày",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại đất mùn",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 51,
+        "value": "đất mùn",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9696749864473289,
+        "value": "đất mùn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 51,
+        "confidence_entity": 0.9980947375297546,
+        "value": "đất mùn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và thuộc loại đất phèn",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 52,
+        "value": "đất phèn",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 52,
+        "confidence_entity": 0.9679600069622314,
+        "value": "đất phèn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 44,
+        "end": 52,
+        "confidence_entity": 0.9992928504943848,
+        "value": "đất phèn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại đất phù sa và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 31,
+        "value": "đất phù sa",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 44,
+        "end": 48,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.9822065746770039,
+        "value": "đất phù sa",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 31,
+        "confidence_entity": 0.9972647428512573,
+        "value": "đất phù sa",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại đất phèn và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 29,
+        "value": "đất phèn",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 42,
+        "end": 46,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 29,
+        "confidence_entity": 0.984326966140098,
+        "value": "đất phèn",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 29,
+        "confidence_entity": 0.9985660910606384,
+        "value": "đất phèn",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại đất cát và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "đất cát",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9925445439022914,
+        "value": "đất cát",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9997475743293762,
+        "value": "đất cát",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng ở nơi có độ ẩm thấp và ở nơi bóng râm",
+    "entities": [
+      {
+        "start": 25,
+        "end": 29,
+        "value": "thấp",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 39,
+        "end": 47,
+        "value": "bóng râm",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionsecond",
+        "start": 39,
+        "end": 47,
+        "confidence_entity": 0.9861608221284378,
+        "value": "bóng râm",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionsecond",
+        "start": 39,
+        "end": 47,
+        "confidence_entity": 0.9985936284065247,
+        "value": "bóng râm",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  },
+  {
+    "text": "Cây trồng thuộc loại thân gỗ và có độ ẩm thấp",
+    "entities": [
+      {
+        "start": 21,
+        "end": 28,
+        "value": "thân gỗ",
+        "entity": "conditionfirst"
+      },
+      {
+        "start": 41,
+        "end": 45,
+        "value": "thấp",
+        "entity": "conditionsecond"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9817775917702026,
+        "value": "thân gỗ",
+        "extractor": "CRFEntityExtractor"
+      },
+      {
+        "entity": "conditionfirst",
+        "start": 21,
+        "end": 28,
+        "confidence_entity": 0.9981064796447754,
+        "value": "thân gỗ",
+        "extractor": "DIETClassifier"
+      }
+    ]
+  }
+]
