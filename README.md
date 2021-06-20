@@ -1,5 +1,5 @@
 # Chatbot
-#.( +++++ Yêu cầu thư mục này phải nằm trong đường dẫn localhosst  +++++)
+#( +++++ Yêu cầu thư mục này phải nằm trong đường dẫn localhosst  +++++)
 	+ Đặt trong đường dẫn của locahost.
 	+ File database sử dụng là data_trees_chatbot.sql để import vào csdl.Để chatbot lẫn website sử dụng.
 	+ Tên csdl đặt là data_trees.
